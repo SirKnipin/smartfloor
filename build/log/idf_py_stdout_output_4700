@@ -1,0 +1,1157 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x1c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400228dc
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3054
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 10 2025 18:52:29[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (58) boot:  1 nvs              WiFi data        01 02 00010000 0000c000[0m
+[0;32mI (64) boot:  2 nvs_keys         NVS keys         01 04 0001c000 00001000[0m
+[0;32mI (71) boot:  3 otadata          OTA data         01 00 0001d000 00002000[0m
+[0;32mI (77) boot:  4 phy_init         RF data          01 01 0001f000 00001000[0m
+[0;32mI (84) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (90) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (97) boot:  7 fctry            WiFi data        01 02 003e0000 00006000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=42140020 size=3a068h (237672) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0005a090 vaddr=40800000 size=05f88h ( 24456) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=13fd58h (1310040) map[0m
+[0;32mI (406) esp_image: segment 3: paddr=0019fd80 vaddr=40805f88 size=18bbch (101308) load[0m
+[0;32mI (428) esp_image: segment 4: paddr=001b8944 vaddr=4081eb50 size=0448ch ( 17548) load[0m
+[0;32mI (433) esp_image: segment 5: paddr=001bcdd8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (454) cpu_start: Unicore app[0m
+[0;32mI (462) cpu_start: Pro cpu start user code[0m
+[0;32mI (462) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (463) app_init: Project name:     light[0m
+[0;32mI (466) app_init: App version:      1.0[0m
+[0;32mI (470) app_init: Compile time:     Jun 10 2025 18:52:16[0m
+[0;32mI (475) app_init: ELF file SHA256:  355f3534c...[0m
+[0;32mI (479) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (483) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (487) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (491) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (494) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (501) heap_init: At 40836B80 len 00045A90 (278 KiB): RAM[0m
+[0;32mI (506) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (511) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM[0m
+[0;32mI (517) spi_flash: detected chip: generic[0m
+[0;32mI (520) spi_flash: flash io: dio[0m
+[0;33mW (523) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (537) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (541) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (548) coexist: coex firmware version: e727207[0m
+[0;32mI (552) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (557) main_task: Calling app_main()[0m
+[0;32mI (577) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (577) temp_sensor: ADC calibration enabled[0m
+[0;32mI (577) temp_sensor: Raw: 897, Voltage: 0.888 V, Temp: -184.35 °C[0m
+[0;32mI (587) temp_ctrl: T=-184.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (587) app_main: Floor (as Dimmable Light) created with endpoint_id 1[0m
+[0;32mI (597) app_main: Socket (as On/Off Plugin) created with endpoint_id 2[0m
+[0;32mI (597) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (607) app_driver: App driver initialized for Socket on GPIO 4[0m
+[0;32mI (617) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (617) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (627) wifi:wifi driver task: 40844188, prio:23, stack:6656, core=0[0m
+[0;32mI (627) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (627) wifi:wifi certification version: v7.0[0m
+[0;32mI (637) wifi:config NVS flash: enabled[0m
+[0;32mI (637) wifi:config nano formatting: disabled[0m
+[0;32mI (647) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (647) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (657) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (657) wifi:Init management short buffer num: 32[0m
+[0;32mI (667) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (667) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (667) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (677) wifi:Init static rx buffer num: 10[0m
+[0;32mI (677) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (687) wifi_init: rx ba win: 6[0m
+[0;32mI (687) wifi_init: accept mbox: 6[0m
+[0;32mI (687) wifi_init: tcpip mbox: 32[0m
+[0;32mI (697) wifi_init: udp mbox: 6[0m
+[0;32mI (697) wifi_init: tcp mbox: 6[0m
+[0;32mI (697) wifi_init: tcp tx win: 5760[0m
+[0;32mI (707) wifi_init: tcp rx win: 5760[0m
+[0;32mI (707) wifi_init: tcp mss: 1440[0m
+[0;32mI (707) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (717) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (717) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (737) chip[DL]: NVS set: chip-counters/reboot-count = 2 (0x2)[0m
+[0;32mI (737) chip[DL]: Real time clock set to 946684800 (2000-01-01 00:00:00 UTC)[0m
+[0;32mI (737) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (737) BLE_INIT: ble controller commit:[c0eafd3][0m
+[0;32mI (747) BLE_INIT: Bluetooth MAC: f0:f5:bd:10:29:1e[0m
+[0;32mI (747) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;32mI (837) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[0;32mI (847) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (847) CHIP[DL]: BLE host-controller synced[0m
+[0;32mI (1347) chip[DL]: Starting ESP WiFi layer[0m
+[0;33mW (1347) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1347) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1347) wifi:(agc)0x600a7128:0xd205aa08, min.avgNF:0xce->0xd2(dB), RCalCount:0x5a, min.RRssi:0xa08(-95.50)[0m
+[0;33mW (1357) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (1407) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1407) wifi:mode : sta (f0:f5:bd:10:29:1c)[0m
+[0;32mI (1417) wifi:enable tsf[0m
+[0;32mI (1417) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 43[0m
+[0;33mW (1417) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1427) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1437) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 2[0m
+[0;33mW (1437) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1447) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1447) chip[SVR]: Initializing subscription resumption storage...[0m
+[0;32mI (1457) chip[SVR]: Server initializing...[0m
+[0;32mI (1457) chip[TS]: Last Known Good Time: 2023-10-14T01:16:48[0m
+[0;32mI (1467) chip[DMG]: AccessControl: initializing[0m
+[0;32mI (1467) chip[DMG]: Examples::AccessControlDelegate::Init[0m
+[0;32mI (1477) chip[DMG]: AccessControl: setting[0m
+[0;32mI (1477) chip[DMG]: DefaultAclStorage: initializing[0m
+[0;32mI (1487) chip[DMG]: DefaultAclStorage: 0 entries loaded[0m
+[0;32mI (1487) chip[SVR]: WARNING: mTestEventTriggerDelegate is null[0m
+[0;32mI (1507) chip[ZCL]: Using ZAP configuration...[0m
+[0;32mI (1507) esp_matter_cluster: Cluster plugin init common callback[0m
+[0;32mI (1507) chip[DMG]: AccessControlCluster: initializing[0m
+[0;32mI (1517) chip[ZCL]: WRITE ERR: ep 0 clus 0x0000_0030 attr 0x0000_0000 not supported[0m
+[0;32mI (1517) chip[ZCL]: Initiating Admin Commissioning cluster.[0m
+[0;32mI (1527) chip[DIS]: Updating services using commissioning mode 1[0m
+[0;32mI (1537) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (1537) chip[DIS]: Advertise commission parameter vendorID=65521 productID=32768 discriminator=3840/15 cm=1 cp=0[0m
+[0;32mI (1547) chip[DIS]: CHIP minimal mDNS configured as 'Commissionable node device'; instance name: 57FA94BD651D4DBD.[0m
+[0;32mI (1557) chip[DIS]: mDNS service published: _matterc._udp[0m
+[0;32mI (1567) chip[IN]: CASE Server enabling CASE session setups[0m
+[0;32mI (1567) chip[SVR]: Joining Multicast groups[0m
+[0;32mI (1577) chip[SVR]: Server Listening...[0m
+[1;31mE (1577) chip[SVR]: Cound not find endpoint index for endpoint 0[0m
+[0;32mI (1577) esp_matter_core: Dynamic endpoint 0 added[0m
+[0;32mI (1587) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000003's Attribute 0x00000001 is 1 **********[0m
+[0;32mI (1597) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1607) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1617) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1627) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1637) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (1647) esp_matter_core: Dynamic endpoint 1 added[0m
+[0;32mI (1657) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000003's Attribute 0x00000001 is 2 **********[0m
+[0;32mI (1667) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1677) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1687) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1697) esp_matter_core: Dynamic endpoint 2 added[0m
+[0;32mI (1587) temp_sensor: Raw: 641, Voltage: 0.633 V, Temp: -209.85 °C[0m
+[0;32mI (1707) temp_ctrl: T=-209.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (1717) main_task: Returned from app_main()[0m
+[0;32mI (1717) chip[DL]: WIFI_EVENT_STA_START[0m
+[0;33mW (1717) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1727) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1737) chip[DL]: Configuring CHIPoBLE advertising (interval 25 ms, connectable)[0m
+[0;32mI (1737) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (1747) NimBLE: disc_mode=2[0m
+[0;32mI (1747) NimBLE:  adv_channel_map=0 own_addr_type=1 adv_filter_policy=0 adv_itvl_min=40 adv_itvl_max=40[0m
+[0;32mI (1757) NimBLE: [0m
+
+[0;32mI (1757) chip[DL]: CHIPoBLE advertising started[0m
+[0;32mI (1767) app_main: Commissioning window opened[0m
+[0;32mI (2717) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (2717) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3717) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (3717) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (4717) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (4717) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (5717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (5717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (6717) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (6717) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (7717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (7717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (8717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (9717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (9717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (10717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (11717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (12717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (13717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (14717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (15717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (16717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (17717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (17717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (18717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (19717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (20717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (21717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (22717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (22717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (23717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (24717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (25717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (26717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (27717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (27717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (28717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (28717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (29717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (29717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (30717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (30717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (31527) chip[DL]: bleAdv Timeout : Start slow advertisement[0m
+[0;32mI (31527) chip[DL]: Configuring CHIPoBLE advertising (interval 500 ms, connectable)[0m
+[0;32mI (31527) chip[DL]: Device already advertising, stop active advertisement and restart[0m
+[0;32mI (31537) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (31547) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (31547) NimBLE: disc_mode=2[0m
+[0;32mI (31547) NimBLE:  adv_channel_map=0 own_addr_type=1 adv_filter_policy=0 adv_itvl_min=800 adv_itvl_max=800[0m
+[0;32mI (31557) NimBLE: [0m
+
+[0;32mI (31717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (31717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (32717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (32717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (33717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (34717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (34717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (35717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (35717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (36717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (36717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (37717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (37717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (38717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (38717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (39717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (39717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (40717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (40717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (41717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (42717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (42717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (43717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (43717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (44717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (45717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (45717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (46717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (46717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (47717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (47717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (48717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (48717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (49717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (49717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (50717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (50717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (51717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (51717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (52717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (52717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (53717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (53717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (54717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (54717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (55717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (55717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (56717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (56717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (57717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (57717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (58717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (58717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (59717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (59717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (60717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (60717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (61717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (61717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (62717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (62717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (63717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (63717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (64717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (64717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (65717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (65717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (66717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (66717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (67717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (67717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (68717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (68717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (69717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (69717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (70717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (70717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (71717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (71717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (72717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (72717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (73717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (73717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (74717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (74717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (75717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (75717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (76717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (76717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (77717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (77717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (78717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (78717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (79717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (79717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (80717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (80717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (81717) temp_sensor: Raw: 640, Voltage: 0.632 V, Temp: -209.95 °C[0m
+[0;32mI (81717) temp_ctrl: T=-209.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (82717) temp_sensor: Raw: 640, Voltage: 0.632 V, Temp: -209.95 °C[0m
+[0;32mI (82717) temp_ctrl: T=-209.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (83717) temp_sensor: Raw: 641, Voltage: 0.633 V, Temp: -209.85 °C[0m
+[0;32mI (83717) temp_ctrl: T=-209.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (84717) temp_sensor: Raw: 640, Voltage: 0.632 V, Temp: -209.95 °C[0m
+[0;32mI (84717) temp_ctrl: T=-209.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (85717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (85717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (86717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (86717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (87717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (87717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (88717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (88717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (89717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (89717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (90717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (90717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (91717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (91717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (92717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (92717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (93717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (93717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (94717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (94717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (95717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (95717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (96717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (96717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (97717) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (97717) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (98717) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (98717) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (99717) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (99717) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (100717) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (100717) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (101717) temp_sensor: Raw: 816, Voltage: 0.808 V, Temp: -192.35 °C[0m
+[0;32mI (101717) temp_ctrl: T=-192.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (102717) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (102717) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (103717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (103717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (104717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (104717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (105717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (105717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (106717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (106717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (107717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (107717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (108717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (108717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (109717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (109717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (110717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (110717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (111717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (111717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (112717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (112717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (113717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (113717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (114717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (114717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (115717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (115717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (116717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (116717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (117717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (117717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (118717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (118717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (119717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (119717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (120717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (120717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (121717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (121717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (122717) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (122717) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (123717) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (123717) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (124717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (124717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (125717) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (125717) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (126717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (126717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (127717) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (127717) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (128717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (128717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (129717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (129717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (130717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (130717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (131717) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (131717) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (132717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (132717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (133717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (133717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (134717) temp_sensor: Raw: 704, Voltage: 0.697 V, Temp: -203.45 °C[0m
+[0;32mI (134717) temp_ctrl: T=-203.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (135717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (135717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (136717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (136717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (137717) temp_sensor: Raw: 704, Voltage: 0.697 V, Temp: -203.45 °C[0m
+[0;32mI (137717) temp_ctrl: T=-203.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (138717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (138717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (139717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (139717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (140717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (140717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (141717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (141717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (142717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (142717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (143717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (143717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (144717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (144717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (145717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (145717) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (146717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (146717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (147717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (147717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (148717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (148717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (149717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (149717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (150717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (150717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (151717) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (151717) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (152717) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (152717) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (153717) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (153717) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (154717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (154717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (155717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (155717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (156717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (156717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (157717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (157717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (158717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (158717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (159717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (159717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (160717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (160717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (161717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (161717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (162717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (162717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (163717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (163717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (164717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (164717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (165717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (165717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (166717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (166717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (167717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (167717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (168717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (168717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (169717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (169717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (170717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (170717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (171717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (171717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (172717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (172717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (173717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (173717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (174717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (174717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (175717) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (175717) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (176717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (176717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (177717) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (177717) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (178717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (178717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (179717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (179717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (180717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (180717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (181717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (181717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (182717) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (182717) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (183487) chip[DL]: BLE GAP connection established (con 0)[0m
+[0;32mI (183487) chip[DL]: CHIPoBLE advertising stopped[0m
+[0;32mI (183717) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (183717) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (184717) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (184717) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (185717) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (185717) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (186717) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (186717) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (187147) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (187147) chip[BLE]: local and remote recv window sizes = 5[0m
+[0;32mI (187147) chip[BLE]: selected BTP version 4[0m
+[0;32mI (187157) chip[BLE]: using BTP fragment sizes rx 244 / tx 244.[0m
+[0;32mI (187387) chip[DL]: Write request/command received for CHIPoBLE TX CCCD characteristic (con 0 ) indicate = 1[0m
+[0;32mI (187387) chip[DL]: CHIPoBLE subscribe received[0m
+[0;32mI (187397) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (187397) NimBLE: att_handle=18[0m
+
+[0;32mI (187627) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (187637) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (187637) chip[EM]: >>> [E:24833r S:0 M:42720691] (U) Msg RX from 0:93E54B4B22D53587 [0000] to 0000000000000000 --- Type 0000:20 (SecureChannel:PBKDFParamRequest) (B:98)[0m
+[0;32mI (187657) chip[EM]: <<< [E:24833r S:0 M:121357493] (U) Msg TX from 0000000000000000 to 0:93E54B4B22D53587 [0000] [BLE] --- Type 0000:21 (SecureChannel:PBKDFParamResponse) (B:154)[0m
+[0;32mI (187667) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (187667) NimBLE: att_handle=18[0m
+
+[0;32mI (187677) chip[SVR]: Commissioning session establishment step started[0m
+[0;32mI (187717) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (187717) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (187807) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (187997) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (187997) chip[EM]: >>> [E:24833r S:0 M:42720692] (U) Msg RX from 0:93E54B4B22D53587 [0000] to 0000000000000000 --- Type 0000:22 (SecureChannel:PASE_Pake1) (B:92)[0m
+[0;32mI (188057) chip[EM]: <<< [E:24833r S:0 M:121357494] (U) Msg TX from 0000000000000000 to 0:93E54B4B22D53587 [0000] [BLE] --- Type 0000:23 (SecureChannel:PASE_Pake2) (B:127)[0m
+[0;32mI (188067) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (188067) NimBLE: att_handle=18[0m
+
+[0;32mI (188227) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (188347) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (188357) chip[EM]: >>> [E:24833r S:0 M:42720693] (U) Msg RX from 0:93E54B4B22D53587 [0000] to 0000000000000000 --- Type 0000:24 (SecureChannel:PASE_Pake3) (B:59)[0m
+[0;32mI (188367) chip[EM]: <<< [E:24833r S:0 M:121357495] (U) Msg TX from 0000000000000000 to 0:93E54B4B22D53587 [0000] [BLE] --- Type 0000:40 (SecureChannel:StatusReport) (B:30)[0m
+[0;32mI (188377) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (188387) NimBLE: att_handle=18[0m
+
+[0;32mI (188387) chip[SC]: SecureSession[0x408262a0, LSID:37327]: State change 'kEstablishing' --> 'kActive'[0m
+[0;32mI (188397) chip[SVR]: Commissioning completed session establishment step[0m
+[0;32mI (188397) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (188407) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (188417) chip[SVR]: Device completed Rendezvous process[0m
+[0;32mI (188527) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (188537) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (188537) chip[EM]: >>> [E:24834r S:37327 M:155875851] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:02 (IM:ReadRequest) (B:131)[0m
+[0;32mI (188557) chip[DL]: NVS set: chip-config/reg-location = 0 (0x0)[0m
+[0;32mI (188557) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (188567) chip[EM]: <<< [E:24834r S:37327 M:252955494] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:05 (IM:ReportData) (B:258)[0m
+[0;32mI (188577) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (188587) NimBLE: att_handle=18[0m
+
+[0;32mI (188717) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (188717) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (188887) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (188887) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (188897) NimBLE: att_handle=18[0m
+
+[0;32mI (189007) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (189367) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (189377) chip[EM]: >>> [E:24835r S:37327 M:155875852] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:02 (IM:ReadRequest) (B:106)[0m
+[1;31mE (189387) chip[DMG]: Read request on unknown cluster - no data version available[0m
+[1;31mE (189387) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0046, attributeId: 0x0000_0002err = 5c3[0m
+[1;31mE (189397) chip[DMG]: Read request on unknown cluster - no data version available[0m
+[1;31mE (189407) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0046, attributeId: 0x0000_0001err = 5c3[0m
+[1;31mE (189417) chip[DMG]: Read request on unknown cluster - no data version available[0m
+[1;31mE (189427) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0046, attributeId: 0x0000_0000err = 5c3[0m
+[1;31mE (189437) chip[DMG]: Read request on unknown cluster - no data version available[0m
+[1;31mE (189447) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0046, attributeId: 0x0000_0007err = 5c3[0m
+[1;31mE (189457) chip[DMG]: Read request on unknown cluster - no data version available[0m
+[1;31mE (189467) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0046, attributeId: 0x0000_0006err = 5c3[0m
+[0;32mI (189477) chip[EM]: <<< [E:24835r S:37327 M:252955495] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:05 (IM:ReportData) (B:180)[0m
+[0;32mI (189487) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (189497) NimBLE: att_handle=18[0m
+
+[0;32mI (189717) temp_sensor: Raw: 704, Voltage: 0.697 V, Temp: -203.45 °C[0m
+[0;32mI (189717) temp_ctrl: T=-203.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (189847) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (189857) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (189857) chip[EM]: >>> [E:24836r S:37327 M:155875853] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:65)[0m
+[0;32mI (189867) chip[FS]: GeneralCommissioning: Received ArmFailSafe (60s)[0m
+[0;32mI (189877) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (189887) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 4 **********[0m
+[0;32mI (189897) chip[EM]: <<< [E:24836r S:37327 M:252955496] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:66)[0m
+[0;32mI (189917) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (189917) NimBLE: att_handle=18[0m
+
+[0;32mI (190267) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (190277) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (190277) chip[EM]: >>> [E:24837r S:37327 M:155875854] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:70)[0m
+[0;32mI (190297) chip[DL]: NVS set: chip-config/reg-location = 0 (0x0)[0m
+[0;32mI (190307) chip[DL]: NVS set: chip-config/country-code = "XX"[0m
+[0;32mI (190307) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 4 **********[0m
+[0;32mI (190317) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 5 **********[0m
+[0;32mI (190327) chip[EM]: <<< [E:24837r S:37327 M:252955497] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:66)[0m
+[0;32mI (190337) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (190347) NimBLE: att_handle=18[0m
+
+[0;32mI (190687) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (190687) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (190697) chip[EM]: >>> [E:24838r S:37327 M:155875855] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:62)[0m
+[0;32mI (190707) esp_matter_command: Received command 0x00000002 for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (190717) chip[ZCL]: OpCreds: Certificate Chain request received for PAI[0m
+[0;32mI (190727) chip[EM]: <<< [E:24838r S:37327 M:252955498] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:527)[0m
+[0;32mI (190737) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (190747) NimBLE: att_handle=18[0m
+
+[0;32mI (190717) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (190757) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (191287) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (191287) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (191297) NimBLE: att_handle=18[0m
+
+[0;32mI (191647) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (191647) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (191657) NimBLE: att_handle=18[0m
+
+[0;32mI (191757) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (191757) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (191887) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (192007) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (192017) chip[EM]: >>> [E:24839r S:37327 M:155875856] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:62)[0m
+[0;32mI (192027) esp_matter_command: Received command 0x00000002 for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (192027) chip[ZCL]: OpCreds: Certificate Chain request received for DAC[0m
+[0;32mI (192037) chip[EM]: <<< [E:24839r S:37327 M:252955499] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:557)[0m
+[0;32mI (192057) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (192057) NimBLE: att_handle=18[0m
+
+[0;32mI (192187) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (192187) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (192197) NimBLE: att_handle=18[0m
+
+[0;32mI (192547) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (192547) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (192557) NimBLE: att_handle=18[0m
+
+[0;32mI (192757) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (192757) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (192847) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (192857) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (192857) chip[EM]: >>> [E:24840r S:37327 M:155875857] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:94)[0m
+[0;32mI (192867) esp_matter_command: Received command 0x00000000 for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (192877) chip[ZCL]: OpCreds: Received an AttestationRequest command[0m
+[0;32mI (192907) chip[ZCL]: OpCreds: AttestationRequest successful.[0m
+[0;32mI (192907) chip[EM]: <<< [E:24840r S:37327 M:252955500] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:714)[0m
+[0;32mI (192917) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (192917) NimBLE: att_handle=18[0m
+
+[0;32mI (193267) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (193267) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (193277) NimBLE: att_handle=18[0m
+
+[0;32mI (193507) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (193507) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (193517) NimBLE: att_handle=18[0m
+
+[0;32mI (193757) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (193757) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (193867) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (194047) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (194057) chip[EM]: >>> [E:24841r S:37327 M:155875858] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:94)[0m
+[0;32mI (194067) esp_matter_command: Received command 0x00000004 for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (194067) chip[ZCL]: OpCreds: Received a CSRRequest command[0m
+[0;32mI (194107) chip[ZCL]: OpCreds: AllocatePendingOperationalKey succeeded[0m
+[0;32mI (194117) chip[ZCL]: OpCreds: CSRRequest successful.[0m
+[0;32mI (194127) chip[EM]: <<< [E:24841r S:37327 M:252955501] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:373)[0m
+[0;32mI (194127) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (194137) NimBLE: att_handle=18[0m
+
+[0;32mI (194347) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (194347) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (194357) NimBLE: att_handle=18[0m
+
+[0;32mI (194757) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (194757) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (194767) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (194947) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (195187) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (195197) chip[EM]: >>> [E:24842r S:37327 M:155875859] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:293)[0m
+[0;32mI (195207) esp_matter_command: Received command 0x0000000B for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (195207) chip[ZCL]: OpCreds: Received an AddTrustedRootCertificate command[0m
+[0;32mI (195247) chip[ZCL]: OpCreds: AddTrustedRootCertificate successful.[0m
+[0;32mI (195247) chip[EM]: <<< [E:24842r S:37327 M:252955502] (S) Msg TX from 0000000000000000 to 0:FFFFFFFB00000000 [0000] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:63)[0m
+[0;32mI (195257) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (195267) NimBLE: att_handle=18[0m
+
+[0;32mI (195427) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (195617) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (195757) temp_sensor: Raw: 657, Voltage: 0.650 V, Temp: -208.15 °C[0m
+[0;32mI (195757) temp_ctrl: T=-208.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (195847) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (196267) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (196277) chip[EM]: >>> [E:24843r S:37327 M:155875860] (S) Msg RX from 0:FFFFFFFB00000000 [0000] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:564)[0m
+[0;32mI (196287) esp_matter_command: Received command 0x00000006 for endpoint 0x0000's cluster 0x0000003E[0m
+[0;32mI (196287) chip[ZCL]: OpCreds: Received an AddNOC command[0m
+[0;32mI (196297) chip[FP]: Validating NOC chain[0m
+[0;32mI (196357) chip[FP]: NOC chain validation successful[0m
+[0;32mI (196357) chip[FP]: Added new fabric at index: 0x1[0m
+[0;32mI (196357) chip[FP]: Assigned compressed fabric ID: 0x6A683EF473B4D4CD, node ID: 0x0000000000000102[0m
+[0;32mI (196367) chip[TS]: Last Known Good Time: 2023-10-14T01:16:48[0m
+[0;32mI (196367) chip[TS]: New proposed Last Known Good Time: 2021-01-01T00:00:00[0m
+[0;32mI (196377) chip[TS]: Retaining current Last Known Good Time[0m
+[0;32mI (196387) chip[ZCL]: OpCreds: ACL entry created for Fabric index 0x1 CASE Admin Subject 0x0000000000000001[0m
+[0;32mI (196397) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (196397) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (196407) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (196417) chip[ZCL]: OpCreds: successfully created fabric index 0x1 via AddNOC[0m
+[0;32mI (196427) chip[EM]: <<< [E:24843r S:37327 M:252955503] (S) Msg TX from 0000000000000000 to 1:FFFFFFFB00000000 [D4CD] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:66)[0m
+[0;32mI (196437) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (196447) NimBLE: att_handle=18[0m
+
+[0;32mI (196507) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (196517) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (196517) chip[EM]: >>> [E:24844r S:37327 M:155875861] (S) Msg RX from 1:FFFFFFFB00000000 [D4CD] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:107)[0m
+[0;32mI (196537) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 5 **********[0m
+[0;32mI (196537) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 23 **********[0m
+[0;32mI (196557) chip[EM]: <<< [E:24844r S:37327 M:252955504] (S) Msg TX from 0000000000000000 to 1:FFFFFFFB00000000 [D4CD] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:66)[0m
+[0;32mI (196567) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (196577) NimBLE: att_handle=18[0m
+
+[0;32mI (196757) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (196757) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (197047) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (197347) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (197357) chip[EM]: >>> [E:24845r S:37327 M:155875862] (S) Msg RX from 1:FFFFFFFB00000000 [D4CD] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:65)[0m
+[0;32mI (197367) chip[FS]: GeneralCommissioning: Received ArmFailSafe (73s)[0m
+[0;32mI (197367) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 23 **********[0m
+[0;32mI (197377) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 25 **********[0m
+[0;32mI (197397) chip[EM]: <<< [E:24845r S:37327 M:252955505] (S) Msg TX from 0000000000000000 to 1:FFFFFFFB00000000 [D4CD] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:66)[0m
+[0;32mI (197407) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (197407) NimBLE: att_handle=18[0m
+
+[0;32mI (197707) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (197757) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (197757) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (197777) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (197777) chip[EM]: >>> [E:24846r S:37327 M:155875863] (S) Msg RX from 1:FFFFFFFB00000000 [D4CD] to 0000000000000000 --- Type 0001:08 (IM:InvokeCommandRequest) (B:96)[0m
+[0;32mI (197787) chip[NP]: ESP NetworkCommissioningDelegate: SSID: A35 пользователя Д[0m
+[0;33mW (197797) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (197797) chip[DL]: WiFi station mode change: Enabled -> Disabled[0m
+[0;33mW (197807) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (197827) chip[DL]: WiFi station mode change: Disabled -> Enabled[0m
+[0;33mW (197827) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (197837) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (197837) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (197847) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (197847) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (197857) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (197867) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (197867) chip[DL]: Attempting to connect WiFi station interface[0m
+[1;31mE (197877) wifi:sta is connecting, return error[0m
+[1;31mE (197877) chip[DL]: esp_wifi_connect() failed: ESP_ERR_WIFI_CONN[0m
+[0;33mW (197887) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (197887) chip[DL]: Attempting to connect WiFi station interface[0m
+[1;31mE (197897) wifi:sta is connecting, return error[0m
+[1;31mE (197897) chip[DL]: esp_wifi_connect() failed: ESP_ERR_WIFI_CONN[0m
+[0;32mI (198757) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (198757) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (199337) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (199337) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (199347) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (199347) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 43[0m
+[0;32mI (199357) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (199377) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (199377) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (199387) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (199397) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (199397) wifi:(trc)phytype:CBW20-SGI, snr:69, maxRate:144, highestRateIdx:0[0m
+[0;33mW (199407) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (199417) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:69, ampduState:wait operational[0m
+[0;32mI (199427) wifi:ifidx:0, rssi:-28, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (199437) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (199457) wifi:connected with A35 пользователя Д, aid = 4, channel 6, BW20, bssid = 66:eb:d1:d7:90:12[0m
+[0;32mI (199457) wifi:security: WPA2-PSK, phy:11bgn, rssi:-28, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (199477) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (199477) wifi:pm start, type:1, aid:0x4, trans-BSSID:66:eb:d1:d7:90:12, BSSID[5]:0x12, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (199487) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (199497) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (199497) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (199517) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (199527) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (199537) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1001290, TALO:0xd7d1eb66, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (199547) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (199557) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (199557) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (199567) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 4[0m
+[0;32mI (199577) chip[DL]: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (199577) chip[DL]: WiFi station state change: Connecting -> Connecting_Succeeded[0m
+[0;32mI (199587) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (199597) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (199607) chip[DL]: WiFi station state change: Connecting_Succeeded -> Connected[0m
+[0;32mI (199617) chip[DL]: WiFi station interface connected[0m
+[0;32mI (199617) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 25 **********[0m
+[0;32mI (199627) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 27 **********[0m
+[0;32mI (199637) chip[EM]: <<< [E:24846r S:37327 M:252955506] (S) Msg TX from 0000000000000000 to 1:FFFFFFFB00000000 [D4CD] [BLE] --- Type 0001:09 (IM:InvokeCommandResponse) (B:65)[0m
+[0;32mI (199657) NimBLE: GATT procedure initiated: indicate; [0m
+[0;32mI (199657) NimBLE: att_handle=18[0m
+
+[0;32mI (199667) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (199667) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (199677) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (199687) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (199687) chip[SVR]: Operational advertising enabled[0m
+[0;32mI (199697) chip[DL]: Updating advertising data[0m
+[0;32mI (199757) temp_sensor: Raw: 656, Voltage: 0.649 V, Temp: -208.25 °C[0m
+[0;32mI (199757) temp_ctrl: T=-208.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (199867) chip[DL]: Confirm received for CHIPoBLE TX characteristic indication (con 0) status= 14 [0m
+[0;32mI (200617) chip[DL]: Posting ESPSystemEvent: IP Event with eventId : 3[0m
+[0;32mI (200617) chip[DL]: IP_EVENT_GOT_IP6[0m
+[0;32mI (200617) chip[DL]: IPv6 addr available. Ready on WIFI_STA_DEF interface: fe80:0000:0000:0000:f2f5:bdff:fe10:291c[0m
+[0;32mI (200627) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (200627) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (200637) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (200637) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (200657) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (200657) chip[SVR]: Server initialization complete[0m
+[0;32mI (200657) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (200667) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (200677) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (200677) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (200687) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (200697) chip[SWU]: Stopping the watchdog timer[0m
+[0;32mI (200697) chip[SWU]: Starting the periodic query timer, timeout: 86400 seconds[0m
+[0;32mI (200707) chip[IM]: No subscriptions to resume[0m
+[0;32mI (200707) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 0 **********[0m
+[0;32mI (200727) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 0 **********[0m
+[0;32mI (200737) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 1 **********[0m
+[0;32mI (200747) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000003 is null **********[0m
+[0;32mI (200717) esp_netif_handlers: sta ip: 192.168.112.247, mask: 255.255.255.0, gw: 192.168.112.174[0m
+[0;32mI (200767) chip[DL]: Posting ESPSystemEvent: IP Event with eventId : 0[0m
+[0;32mI (200767) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (200777) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (200777) chip[DL]: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (200787) chip[DL]: IPv4 address changed on WiFi station interface: 192.168.112.247/255.255.255.0 gateway 192.168.112.174[0m
+[0;32mI (200797) chip[DL]: IPv4 Internet connectivity ESTABLISHED[0m
+[0;32mI (200797) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (200807) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (200817) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (200817) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (200837) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (201777) temp_sensor: Raw: 673, Voltage: 0.666 V, Temp: -206.55 °C[0m
+[0;32mI (201777) temp_ctrl: T=-206.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (201977) chip[EM]: >>> [E:24847r S:0 M:42720694] (U) Msg RX from 0:1A0E45A6DDD09314 [0000] to 0000000000000000 --- Type 0000:30 (SecureChannel:CASE_Sigma1) (B:196)[0m
+[0;32mI (201977) chip[IN]: CASE Server received Sigma1 message . Starting handshake. EC 0x40827cd0[0m
+[0;32mI (201987) chip[EM]: <<< [E:24847r S:0 M:121357496 (Ack:42720694)] (U) Msg TX from 0000000000000000 to 0:1A0E45A6DDD09314 [0000] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (202007) chip[SC]: Received Sigma1 msg[0m
+[0;32mI (202017) chip[SC]: CASE matched destination ID: fabricIndex 1, NodeID 0x0000000000000102[0m
+[0;32mI (202057) chip[EM]: <<< [E:24847r S:0 M:121357497 (Ack:42720694)] (U) Msg TX from 0000000000000000 to 0:1A0E45A6DDD09314 [0000] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0000:31 (SecureChannel:CASE_Sigma2) (B:752)[0m
+[0;32mI (202067) chip[EM]: ??1 [E:24847r S:0 M:121357497] (U) Msg Retransmission to 0:0000000000000000 scheduled for 382ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (202077) chip[SC]: Sent Sigma2 msg[0m
+[0;32mI (202087) chip[EM]: >>> [E:24847r S:0 M:42720694] (U) Msg RX from 0:1A0E45A6DDD09314 [0000] to 0000000000000000 --- Type 0000:30 (SecureChannel:CASE_Sigma1) (B:196)[0m
+[0;32mI (202097) chip[EM]: <<< [E:24847r S:0 M:121357498 (Ack:42720694)] (U) Msg TX from 0000000000000000 to 0:1A0E45A6DDD09314 [0000] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (202157) chip[EM]: >>> [E:24847r S:0 M:42720695 (Ack:121357497)] (U) Msg RX from 0:1A0E45A6DDD09314 [0000] to 0000000000000000 --- Type 0000:32 (SecureChannel:CASE_Sigma3) (B:595)[0m
+[0;32mI (202167) chip[EM]: <<< [E:24847r S:0 M:121357499 (Ack:42720695)] (U) Msg TX from 0000000000000000 to 0:1A0E45A6DDD09314 [0000] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (202187) chip[SC]: Received Sigma3 msg[0m
+[1;31mE (202197) chip[SC]: The device does not support GetClock_RealTimeMS() API: 6c.  Falling back to Last Known Good UTC Time[0m
+[0;32mI (202297) chip[EM]: <<< [E:24847r S:0 M:121357500 (Ack:42720695)] (U) Msg TX from 0000000000000000 to 0:1A0E45A6DDD09314 [0000] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0000:40 (SecureChannel:StatusReport) (B:34)[0m
+[0;32mI (202307) chip[EM]: ??1 [E:24847r S:0 M:121357500] (U) Msg Retransmission to 0:0000000000000000 scheduled for 339ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (202317) chip[SC]: SecureSession[0x40826378, LSID:37328]: State change 'kEstablishing' --> 'kActive'[0m
+[0;32mI (202327) chip[IN]: CASE Session established to peer: <0000000000000001, 1>[0m
+[0;32mI (202337) CHIP[DL]: Write request received for CHIPoBLE RX characteristic con 0 16[0m
+[0;32mI (202397) chip[EM]: >>> [E:24848r S:37328 M:28764734] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:08 (IM:InvokeCommandRequest) (B:59)[0m
+[0;32mI (202397) chip[FS]: GeneralCommissioning: Received CommissioningComplete[0m
+[0;32mI (202407) chip[FP]: Metadata for Fabric 0x1 persisted to storage.[0m
+[0;32mI (202417) chip[TS]: Committing Last Known Good Time to storage: 2023-10-14T01:16:48[0m
+[0;32mI (202417) chip[ZCL]: OpCreds: Fabric index 0x1 was committed to storage. Compressed Fabric Id 0x6A683EF473B4D4CD, FabricId 0000000000000001, NodeId 0000000000000102, VendorId 0x132F[0m
+[0;32mI (202447) chip[FS]: GeneralCommissioning: Successfully committed pending fabric data[0m
+[0;32mI (202447) chip[FS]: Fail-safe cleanly disarmed[0m
+[0;32mI (202447) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 27 **********[0m
+[0;32mI (202457) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (202467) chip[EM]: <<< [E:24848r S:37328 M:122270588 (Ack:28764734)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:09 (IM:InvokeCommandResponse) (B:70)[0m
+[0;32mI (202487) chip[EM]: ??1 [E:24848r S:37328 M:122270588] (S) Msg Retransmission to 1:0000000000000001 scheduled for 404ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (202507) chip[EM]: >>> [E:24847r S:0 M:42720696 (Ack:121357500)] (U) Msg RX from 0:1A0E45A6DDD09314 [0000] to 0000000000000000 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (202517) chip[SWU]: Device commissioned, schedule a default provider query[0m
+[0;32mI (202527) chip[SVR]: Commissioning completed successfully[0m
+[0;32mI (202527) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (202537) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (202547) chip[DIS]: Advertise operational node 6A683EF473B4D4CD-0000000000000102[0m
+[0;32mI (202547) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: 6A683EF473B4D4CD-0000000000000102.[0m
+[0;32mI (202567) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (202567) chip[SC]: SecureSession[0x408262a0, LSID:37327]: State change 'kActive' --> 'kPendingEviction'[0m
+[0;32mI (202577) chip[BLE]: Releasing end point's BLE connection back to application.[0m
+[0;32mI (202587) chip[DL]: Closing BLE GATT connection (con 0)[0m
+[0;32mI (202587) NimBLE: GAP procedure initiated: terminate connection; conn_handle=0 hci_reason=19[0m
+
+[0;32mI (202597) esp_matter_core: Commissioning Complete[0m
+[0;32mI (202607) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[1;31mE (202607) NimBLE: ble_hs_stop: failed to terminate connection; rc=2[0m
+
+[0;32mI (202777) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (202777) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (202897) chip[EM]: <<1 [E:24848r S:37328 M:122270588] (S) Msg Retransmission to 1:0000000000000001[0m
+[0;32mI (202897) chip[EM]: ??2 [E:24848r S:37328 M:122270588] (S) Msg Retransmission to 1:0000000000000001 scheduled for 375ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (202957) chip[EM]: >>> [E:24848r S:37328 M:28764735 (Ack:122270588)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (202987) chip[EM]: >>> [E:24849r S:37328 M:28764736] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (202987) chip[EM]: >>> [E:24848r S:37328 M:28764737 (Ack:122270588)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203007) chip[EM]: <<< [E:24849r S:37328 M:122270589 (Ack:28764736)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:135)[0m
+[0;32mI (203017) chip[EM]: ??1 [E:24849r S:37328 M:122270589] (S) Msg Retransmission to 1:0000000000000001 scheduled for 404ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203057) chip[EM]: >>> [E:24849r S:37328 M:28764738 (Ack:122270589)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203057) chip[EM]: >>> [E:24850r S:37328 M:28764739] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:128)[0m
+[1;31mE (203077) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0028, attributeId: 0x0000_000Ferr = 586[0m
+[0;32mI (203087) chip[EM]: <<< [E:24850r S:37328 M:122270590 (Ack:28764739)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:274)[0m
+[0;32mI (203107) chip[EM]: ??1 [E:24850r S:37328 M:122270590] (S) Msg Retransmission to 1:0000000000000001 scheduled for 370ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203127) chip[EM]: >>> [E:24850r S:37328 M:28764740 (Ack:122270590)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203137) chip[EM]: >>> [E:24851r S:37328 M:28764741] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:62)[0m
+[0;32mI (203157) chip[EM]: <<< [E:24851r S:37328 M:122270591 (Ack:28764741)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:120)[0m
+[0;32mI (203167) chip[EM]: ??1 [E:24851r S:37328 M:122270591] (S) Msg Retransmission to 1:0000000000000001 scheduled for 378ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203227) chip[EM]: >>> [E:24851r S:37328 M:28764742 (Ack:122270591)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203237) chip[EM]: >>> [E:24852r S:37328 M:28764743] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:148)[0m
+[0;32mI (203257) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000030's Attribute 0x0000FFFD is 2 **********[0m
+[0;32mI (203267) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x00000028's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203277) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000001F's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203287) chip[EM]: <<< [E:24852r S:37328 M:122270592 (Ack:28764743)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:380)[0m
+[0;32mI (203297) chip[EM]: ??1 [E:24852r S:37328 M:122270592] (S) Msg Retransmission to 1:0000000000000001 scheduled for 389ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203347) chip[EM]: >>> [E:24852r S:37328 M:28764744 (Ack:122270592)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203347) chip[EM]: >>> [E:24853r S:37328 M:28764745] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:148)[0m
+[0;32mI (203367) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000003C's Attribute 0x0000FFFD is 1 **********[0m
+[0;32mI (203377) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000003C's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203387) chip[EM]: <<< [E:24853r S:37328 M:122270593 (Ack:28764745)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:364)[0m
+[0;32mI (203407) chip[EM]: ??1 [E:24853r S:37328 M:122270593] (S) Msg Retransmission to 1:0000000000000001 scheduled for 369ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203447) chip[EM]: >>> [E:24853r S:37328 M:28764746 (Ack:122270593)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203457) chip[EM]: >>> [E:24854r S:37328 M:28764747] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:148)[0m
+[0;32mI (203467) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x0000FFFD is 1 **********[0m
+[0;32mI (203477) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203487) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000003E's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203507) chip[EM]: <<< [E:24854r S:37328 M:122270594 (Ack:28764747)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:360)[0m
+[0;32mI (203517) chip[EM]: ??1 [E:24854r S:37328 M:122270594] (S) Msg Retransmission to 1:0000000000000001 scheduled for 379ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203547) chip[EM]: >>> [E:24854r S:37328 M:28764748 (Ack:122270594)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203547) chip[EM]: >>> [E:24855r S:37328 M:28764749] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:84)[0m
+[0;32mI (203567) chip[EM]: <<< [E:24855r S:37328 M:122270595 (Ack:28764749)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:184)[0m
+[0;32mI (203587) chip[EM]: ??1 [E:24855r S:37328 M:122270595] (S) Msg Retransmission to 1:0000000000000001 scheduled for 390ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203617) chip[EM]: >>> [E:24855r S:37328 M:28764750 (Ack:122270595)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203617) chip[EM]: >>> [E:24856r S:37328 M:28764751] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:148)[0m
+[0;32mI (203637) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFD is 6 **********[0m
+[0;32mI (203647) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203657) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x0000FFFD is 4 **********[0m
+[0;32mI (203667) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (203677) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000003's Attribute 0x0000FFFD is 5 **********[0m
+[0;32mI (203687) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000003's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203697) chip[EM]: <<< [E:24856r S:37328 M:122270596 (Ack:28764751)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:340)[0m
+[0;32mI (203717) chip[EM]: ??1 [E:24856r S:37328 M:122270596] (S) Msg Retransmission to 1:0000000000000001 scheduled for 332ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203737) chip[EM]: >>> [E:24856r S:37328 M:28764752 (Ack:122270596)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203747) chip[EM]: >>> [E:24857r S:37328 M:28764753] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:148)[0m
+[0;32mI (203767) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x0000FFFD is 4 **********[0m
+[0;32mI (203777) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (203777) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (203787) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (203797) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000003's Attribute 0x0000FFFD is 5 **********[0m
+[0;32mI (203807) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000003's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203817) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFD is 6 **********[0m
+[0;32mI (203827) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203837) chip[EM]: <<< [E:24857r S:37328 M:122270597 (Ack:28764753)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:344)[0m
+[0;32mI (203857) chip[EM]: ??1 [E:24857r S:37328 M:122270597] (S) Msg Retransmission to 1:0000000000000001 scheduled for 400ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203907) chip[EM]: >>> [E:24857r S:37328 M:28764754 (Ack:122270597)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203907) chip[EM]: >>> [E:24858r S:37328 M:28764755] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:76)[0m
+[0;32mI (203927) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFD is 6 **********[0m
+[0;32mI (203937) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (203947) chip[EM]: <<< [E:24858r S:37328 M:122270598 (Ack:28764755)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:142)[0m
+[0;32mI (203967) chip[EM]: ??1 [E:24858r S:37328 M:122270598] (S) Msg Retransmission to 1:0000000000000001 scheduled for 333ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (203987) chip[EM]: >>> [E:24858r S:37328 M:28764756 (Ack:122270598)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (203997) chip[EM]: >>> [E:24859r S:37328 M:28764757] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:03 (IM:SubscribeRequest) (B:59)[0m
+[0;32mI (204007) chip[DMG]: Final negotiated min/max parameters: Min = 30s, Max = 60s[0m
+[0;32mI (204027) chip[EM]: <<< [E:24859r S:37328 M:122270599 (Ack:28764757)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:75)[0m
+[0;32mI (204037) chip[EM]: ??1 [E:24859r S:37328 M:122270599] (S) Msg Retransmission to 1:0000000000000001 scheduled for 353ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204077) chip[EM]: >>> [E:24859r S:37328 M:28764758 (Ack:122270599)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (204077) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (204087) chip[EM]: <<< [E:24859r S:37328 M:122270600 (Ack:28764758)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:04 (IM:SubscribeResponse) (B:48)[0m
+[0;32mI (204107) chip[EM]: ??1 [E:24859r S:37328 M:122270600] (S) Msg Retransmission to 1:0000000000000001 scheduled for 354ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204117) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000039085 and system Timestamp 0x00000000000405B5.[0m
+[0;32mI (204147) chip[EM]: >>> [E:24859r S:37328 M:28764759 (Ack:122270600)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204147) chip[EM]: >>> [E:24860r S:37328 M:28764760] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:73)[0m
+[1;31mE (204167) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0008, attributeId: 0x0000_0003err = 586[0m
+[1;31mE (204177) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0008, attributeId: 0x0000_0002err = 586[0m
+[0;32mI (204187) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204197) chip[EM]: <<< [E:24860r S:37328 M:122270601 (Ack:28764760)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:116)[0m
+[0;32mI (204217) chip[EM]: ??1 [E:24860r S:37328 M:122270601] (S) Msg Retransmission to 1:0000000000000001 scheduled for 379ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204237) chip[EM]: >>> [E:24860r S:37328 M:28764761 (Ack:122270601)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204247) chip[EM]: >>> [E:24861r S:37328 M:28764762] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (204267) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (204277) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204277) chip[EM]: <<< [E:24861r S:37328 M:122270602 (Ack:28764762)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (204297) chip[EM]: ??1 [E:24861r S:37328 M:122270602] (S) Msg Retransmission to 1:0000000000000001 scheduled for 388ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204317) chip[EM]: >>> [E:24861r S:37328 M:28764763 (Ack:122270602)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (204327) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (204337) chip[EM]: <<< [E:24861r S:37328 M:122270603 (Ack:28764763)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (204357) chip[EM]: ??1 [E:24861r S:37328 M:122270603] (S) Msg Retransmission to 1:0000000000000001 scheduled for 394ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204367) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000032038 and system Timestamp 0x00000000003A0AD0.[0m
+[0;32mI (204387) chip[EM]: >>> [E:24861r S:37328 M:28764764 (Ack:122270603)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204397) chip[EM]: >>> [E:24862r S:37328 M:28764765] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (204417) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204427) chip[EM]: <<< [E:24862r S:37328 M:122270604 (Ack:28764765)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (204447) chip[EM]: ??1 [E:24862r S:37328 M:122270604] (S) Msg Retransmission to 1:0000000000000001 scheduled for 409ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204467) chip[EM]: >>> [E:24862r S:37328 M:28764766 (Ack:122270604)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204477) chip[EM]: >>> [E:24863r S:37328 M:28764767] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (204487) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (204507) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204507) chip[EM]: <<< [E:24863r S:37328 M:122270605 (Ack:28764767)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:73)[0m
+[0;32mI (204527) chip[EM]: ??1 [E:24863r S:37328 M:122270605] (S) Msg Retransmission to 1:0000000000000001 scheduled for 375ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204547) chip[EM]: >>> [E:24863r S:37328 M:28764768 (Ack:122270605)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (204557) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (204567) chip[EM]: <<< [E:24863r S:37328 M:122270606 (Ack:28764768)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (204587) chip[EM]: ??1 [E:24863r S:37328 M:122270606] (S) Msg Retransmission to 1:0000000000000001 scheduled for 408ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204597) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000003211D and system Timestamp 0x00000000003A0BB5.[0m
+[0;32mI (204617) chip[DL]: BLE deinit successful and memory reclaimed[0m
+[0;32mI (204637) chip[EM]: >>> [E:24863r S:37328 M:28764769 (Ack:122270606)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204637) chip[EM]: >>> [E:24864r S:37328 M:28764770] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (204657) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204667) chip[EM]: <<< [E:24864r S:37328 M:122270607 (Ack:28764770)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (204687) chip[EM]: ??1 [E:24864r S:37328 M:122270607] (S) Msg Retransmission to 1:0000000000000001 scheduled for 383ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204717) chip[EM]: >>> [E:24864r S:37328 M:28764771 (Ack:122270607)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204727) chip[EM]: >>> [E:24865r S:37328 M:28764772] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (204737) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (204757) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (204757) chip[EM]: <<< [E:24865r S:37328 M:122270608 (Ack:28764772)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:73)[0m
+[0;32mI (204777) chip[EM]: ??1 [E:24865r S:37328 M:122270608] (S) Msg Retransmission to 1:0000000000000001 scheduled for 382ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204787) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (204797) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (204797) chip[EM]: >>> [E:24865r S:37328 M:28764773 (Ack:122270608)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (204817) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (204817) chip[EM]: <<< [E:24865r S:37328 M:122270609 (Ack:28764773)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (204837) chip[EM]: ??1 [E:24865r S:37328 M:122270609] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204857) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000003221F and system Timestamp 0x00000000003A0CB7.[0m
+[0;32mI (204867) chip[EM]: >>> [E:24865r S:37328 M:28764774 (Ack:122270609)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (204887) chip[EM]: >>> [E:24866r S:37328 M:28764775] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (204897) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (204917) chip[EM]: <<< [E:24866r S:37328 M:122270610 (Ack:28764775)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:78)[0m
+[0;32mI (204927) chip[EM]: ??1 [E:24866r S:37328 M:122270610] (S) Msg Retransmission to 1:0000000000000001 scheduled for 362ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (204967) chip[EM]: >>> [E:24866r S:37328 M:28764776 (Ack:122270610)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (204967) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (204977) chip[EM]: <<< [E:24866r S:37328 M:122270611 (Ack:28764776)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (204997) chip[EM]: ??1 [E:24866r S:37328 M:122270611] (S) Msg Retransmission to 1:0000000000000001 scheduled for 382ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (205007) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x00000000000322B7 and system Timestamp 0x00000000003A0D4F.[0m
+[0;32mI (205027) chip[EM]: >>> [E:24866r S:37328 M:28764777 (Ack:122270611)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (205037) chip[EM]: >>> [E:24867r S:37328 M:28764778] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (205057) chip[EM]: <<< [E:24867r S:37328 M:122270612 (Ack:28764778)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (205067) chip[EM]: ??1 [E:24867r S:37328 M:122270612] (S) Msg Retransmission to 1:0000000000000001 scheduled for 340ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (205117) chip[EM]: >>> [E:24867r S:37328 M:28764779 (Ack:122270612)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (205797) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (205797) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (206797) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (206797) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (207077) chip[EM]: >>> [E:24868r S:37328 M:28764780] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0001:06 (IM:WriteRequest) (B:86)[0m
+[0;32mI (207087) chip[EM]: <<< [E:24868r S:37328 M:122270613 (Ack:28764780)] (S) Msg TX from 0000000000000102 to 1:0000000000000001 [D4CD] [UDP:[FE80::3E0B:4FFF:FE2D:850C%st1]:50843] --- Type 0001:07 (IM:WriteResponse) (B:84)[0m
+[0;32mI (207097) chip[EM]: ??1 [E:24868r S:37328 M:122270613] (S) Msg Retransmission to 1:0000000000000001 scheduled for 397ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (207287) chip[EM]: >>> [E:24868r S:37328 M:28764781 (Ack:122270613)] (S) Msg RX from 1:0000000000000001 [D4CD] to 0000000000000102 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (207797) temp_sensor: Raw: 785, Voltage: 0.777 V, Temp: -195.45 °C[0m
+[0;32mI (207797) temp_ctrl: T=-195.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (208797) temp_sensor: Raw: 832, Voltage: 0.823 V, Temp: -190.85 °C[0m
+[0;32mI (208797) temp_ctrl: T=-190.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (209797) temp_sensor: Raw: 832, Voltage: 0.823 V, Temp: -190.85 °C[0m
+[0;32mI (209797) temp_ctrl: T=-190.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (210797) temp_sensor: Raw: 865, Voltage: 0.856 V, Temp: -187.55 °C[0m
+[0;32mI (210797) temp_ctrl: T=-187.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (211797) temp_sensor: Raw: 881, Voltage: 0.872 V, Temp: -185.95 °C[0m
+[0;32mI (211797) temp_ctrl: T=-185.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (212797) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (212797) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (213797) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (213797) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (214797) temp_sensor: Raw: 913, Voltage: 0.903 V, Temp: -182.85 °C[0m
+[0;32mI (214797) temp_ctrl: T=-182.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (215797) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (215797) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (216797) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (216797) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (217797) temp_sensor: Raw: 849, Voltage: 0.840 V, Temp: -189.15 °C[0m
+[0;32mI (217797) temp_ctrl: T=-189.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (218797) temp_sensor: Raw: 896, Voltage: 0.887 V, Temp: -184.45 °C[0m
+[0;32mI (218797) temp_ctrl: T=-184.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (219797) temp_sensor: Raw: 816, Voltage: 0.808 V, Temp: -192.35 °C[0m
+[0;32mI (219797) temp_ctrl: T=-192.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (220797) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (220797) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (221797) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (221797) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (222797) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (222797) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (223797) temp_sensor: Raw: 816, Voltage: 0.808 V, Temp: -192.35 °C[0m
+[0;32mI (223797) temp_ctrl: T=-192.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (224797) temp_sensor: Raw: 833, Voltage: 0.824 V, Temp: -190.75 °C[0m
+[0;32mI (224797) temp_ctrl: T=-190.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (225797) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (225797) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (226797) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (226797) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (227797) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (227797) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (228797) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (228797) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (229797) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (229797) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (230797) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (230797) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (231797) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (231797) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m

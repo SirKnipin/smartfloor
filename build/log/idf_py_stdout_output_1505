@@ -1,0 +1,1578 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4002f478
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3054
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 10 2025 18:52:29[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (58) boot:  1 nvs              WiFi data        01 02 00010000 0000c000[0m
+[0;32mI (64) boot:  2 nvs_keys         NVS keys         01 04 0001c000 00001000[0m
+[0;32mI (71) boot:  3 otadata          OTA data         01 00 0001d000 00002000[0m
+[0;32mI (77) boot:  4 phy_init         RF data          01 01 0001f000 00001000[0m
+[0;32mI (84) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (90) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (97) boot:  7 fctry            WiFi data        01 02 003e0000 00006000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=42140020 size=3a068h (237672) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0005a090 vaddr=40800000 size=05f88h ( 24456) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=13fd58h (1310040) map[0m
+[0;32mI (406) esp_image: segment 3: paddr=0019fd80 vaddr=40805f88 size=18bbch (101308) load[0m
+[0;32mI (428) esp_image: segment 4: paddr=001b8944 vaddr=4081eb50 size=0448ch ( 17548) load[0m
+[0;32mI (433) esp_image: segment 5: paddr=001bcdd8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (454) cpu_start: Unicore app[0m
+[0;32mI (462) cpu_start: Pro cpu start user code[0m
+[0;32mI (462) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (463) app_init: Project name:     light[0m
+[0;32mI (466) app_init: App version:      1.0[0m
+[0;32mI (469) app_init: Compile time:     Jun 10 2025 18:52:16[0m
+[0;32mI (474) app_init: ELF file SHA256:  355f3534c...[0m
+[0;32mI (479) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (483) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (486) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (490) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (494) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (501) heap_init: At 40836B80 len 00045A90 (278 KiB): RAM[0m
+[0;32mI (506) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (511) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM[0m
+[0;32mI (517) spi_flash: detected chip: generic[0m
+[0;32mI (520) spi_flash: flash io: dio[0m
+[0;33mW (523) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (537) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (541) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (548) coexist: coex firmware version: e727207[0m
+[0;32mI (552) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (557) main_task: Calling app_main()[0m
+[0;32mI (587) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (587) temp_sensor: ADC calibration enabled[0m
+[0;32mI (587) temp_sensor: Raw: 896, Voltage: 0.887 V, Temp: -184.45 °C[0m
+[0;32mI (587) temp_ctrl: T=-184.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (597) app_main: Floor (as Dimmable Light) created with endpoint_id 1[0m
+[0;32mI (607) app_main: Socket (as On/Off Plugin) created with endpoint_id 2[0m
+[0;32mI (607) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (617) app_driver: App driver initialized for Socket on GPIO 4[0m
+[0;32mI (627) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (627) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (637) wifi:wifi driver task: 40844524, prio:23, stack:6656, core=0[0m
+[0;32mI (647) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (647) wifi:wifi certification version: v7.0[0m
+[0;32mI (647) wifi:config NVS flash: enabled[0m
+[0;32mI (647) wifi:config nano formatting: disabled[0m
+[0;32mI (657) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (657) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (667) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (667) wifi:Init management short buffer num: 32[0m
+[0;32mI (677) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (677) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (677) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (687) wifi:Init static rx buffer num: 10[0m
+[0;32mI (687) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (697) wifi_init: rx ba win: 6[0m
+[0;32mI (697) wifi_init: accept mbox: 6[0m
+[0;32mI (697) wifi_init: tcpip mbox: 32[0m
+[0;32mI (707) wifi_init: udp mbox: 6[0m
+[0;32mI (707) wifi_init: tcp mbox: 6[0m
+[0;32mI (707) wifi_init: tcp tx win: 5760[0m
+[0;32mI (707) wifi_init: tcp rx win: 5760[0m
+[0;32mI (717) wifi_init: tcp mss: 1440[0m
+[0;32mI (717) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (717) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (727) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (747) chip[DL]: NVS set: chip-counters/reboot-count = 14 (0xE)[0m
+[0;32mI (747) chip[DL]: Real time clock set to 946684800 (2000-01-01 00:00:00 UTC)[0m
+[0;32mI (747) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (747) BLE_INIT: ble controller commit:[c0eafd3][0m
+[0;32mI (757) BLE_INIT: Bluetooth MAC: f0:f5:bd:10:29:1e[0m
+[0;32mI (757) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;32mI (847) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[0;32mI (857) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (857) CHIP[DL]: BLE host-controller synced[0m
+[0;32mI (1357) chip[DL]: Starting ESP WiFi layer[0m
+[0;33mW (1357) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1357) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1357) wifi:(agc)0x600a7128:0xd204fa04, min.avgNF:0xce->0xd2(dB), RCalCount:0x4f, min.RRssi:0xa04(-95.75)[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (1407) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (1407) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (1417) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1417) wifi:mode : sta (f0:f5:bd:10:29:1c)[0m
+[0;32mI (1427) wifi:enable tsf[0m
+[0;32mI (1427) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 43[0m
+[0;33mW (1427) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1437) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (1447) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;32mI (1447) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 2[0m
+[0;33mW (1457) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (1457) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (1467) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1477) chip[SVR]: Initializing subscription resumption storage...[0m
+[0;32mI (1477) chip[SVR]: Server initializing...[0m
+[0;32mI (1487) chip[TS]: Last Known Good Time: 2023-10-14T01:16:48[0m
+[0;32mI (1497) chip[FP]: Fabric index 0x1 was retrieved from storage. Compressed FabricId 0x6A683EF473B4D4CD, FabricId 0x0000000000000001, NodeId 0x0000000000000101, VendorId 0x132F[0m
+[0;32mI (1507) chip[DMG]: AccessControl: initializing[0m
+[0;32mI (1507) chip[DMG]: Examples::AccessControlDelegate::Init[0m
+[0;32mI (1517) chip[DMG]: AccessControl: setting[0m
+[0;32mI (1517) chip[DMG]: DefaultAclStorage: initializing[0m
+[0;32mI (1527) chip[DMG]: DefaultAclStorage: 1 entries loaded[0m
+[0;32mI (1527) chip[SVR]: WARNING: mTestEventTriggerDelegate is null[0m
+[0;32mI (1557) chip[ZCL]: Using ZAP configuration...[0m
+[0;32mI (1557) esp_matter_cluster: Cluster plugin init common callback[0m
+[0;32mI (1557) chip[DMG]: AccessControlCluster: initializing[0m
+[0;32mI (1567) chip[ZCL]: WRITE ERR: ep 0 clus 0x0000_0030 attr 0x0000_0000 not supported[0m
+[0;32mI (1567) chip[ZCL]: Initiating Admin Commissioning cluster.[0m
+[0;32mI (1577) chip[SVR]: Fabric already commissioned. Disabling BLE advertisement[0m
+[0;32mI (1587) chip[IN]: CASE Server enabling CASE session setups[0m
+[0;32mI (1587) chip[SVR]: Joining Multicast groups[0m
+[0;32mI (1597) chip[SVR]: Server Listening...[0m
+[1;31mE (1597) chip[SVR]: Cound not find endpoint index for endpoint 0[0m
+[0;32mI (1607) esp_matter_core: Dynamic endpoint 0 added[0m
+[0;32mI (1607) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000003's Attribute 0x00000001 is 1 **********[0m
+[0;32mI (1617) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1627) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1637) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1647) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1657) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (1667) esp_matter_core: Dynamic endpoint 1 added[0m
+[0;32mI (1677) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000003's Attribute 0x00000001 is 2 **********[0m
+[0;32mI (1687) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1697) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1707) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1717) esp_matter_core: Dynamic endpoint 2 added[0m
+[0;32mI (1597) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (1727) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (1737) main_task: Returned from app_main()[0m
+[0;32mI (1737) chip[DL]: WIFI_EVENT_STA_START[0m
+[0;33mW (1747) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1747) chip[DL]: Attempting to connect WiFi station interface[0m
+[1;31mE (1757) wifi:sta is connecting, return error[0m
+[1;31mE (1757) chip[DL]: esp_wifi_connect() failed: ESP_ERR_WIFI_CONN[0m
+[0;32mI (1767) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (2737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (2737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3737) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (3737) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3767) chip[DL]: BLE deinit successful and memory reclaimed[0m
+[0;32mI (3847) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (3847) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (3847) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (3857) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (3857) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (3867) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (3877) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (3887) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (3887) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (3897) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (3897) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (4007) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (4007) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (4007) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (4007) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (4017) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (4027) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (4737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (4737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (5737) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (5737) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (6407) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (6407) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (6407) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (6417) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6417) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (6427) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6437) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (6447) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6447) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6457) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (6457) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (6557) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6557) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (6567) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (6567) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6567) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6577) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (6737) temp_sensor: Raw: 672, Voltage: 0.665 V, Temp: -206.65 °C[0m
+[0;32mI (6737) temp_ctrl: T=-206.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (7737) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (7737) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (8737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8967) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (8967) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (8967) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (8977) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (8977) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (8987) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (8997) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (8997) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9007) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9017) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (9017) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (9117) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9117) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (9117) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (9127) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9127) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9137) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (9737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (9737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (10737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11527) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (11527) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (11527) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (11537) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11537) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (11547) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11557) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (11557) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11567) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11577) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (11577) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (11677) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11677) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (11677) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (11687) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11687) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11697) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (11737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (11737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (12737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (13737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14087) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (14087) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (14087) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (14097) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14097) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (14107) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14117) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (14117) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14127) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14137) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (14137) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (14237) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14237) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (14237) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (14247) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14247) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14257) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (14737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (14737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (15737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16647) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (16647) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (16647) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (16657) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16657) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (16667) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16677) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (16677) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16687) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16697) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (16697) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (16737) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (16737) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (16797) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16797) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (16797) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (16807) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16807) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16817) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (17737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (17737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (18737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19207) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (19207) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (19207) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (19217) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19217) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (19227) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19237) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (19237) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19247) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19257) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (19257) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (19357) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19357) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (19357) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (19367) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19367) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19377) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (19737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (19737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (20737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21737) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (21737) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21767) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (21767) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (21767) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (21777) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21777) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (21787) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21797) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (21797) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21807) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21817) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (21817) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (21917) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21917) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (21917) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (21927) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21927) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21937) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (22737) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (22737) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23737) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (23737) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24327) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (24327) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (24327) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (24337) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24337) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (24347) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24357) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (24357) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24367) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24377) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (24377) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (24477) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24477) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (24477) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (24487) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24487) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24497) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (24737) temp_sensor: Raw: 705, Voltage: 0.698 V, Temp: -203.35 °C[0m
+[0;32mI (24737) temp_ctrl: T=-203.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25737) temp_sensor: Raw: 912, Voltage: 0.902 V, Temp: -182.95 °C[0m
+[0;32mI (25737) temp_ctrl: T=-182.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26737) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (26737) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26887) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (26887) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (26887) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (26897) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26897) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (26907) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (26917) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (26917) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26927) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (26937) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (26937) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (27037) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (27037) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (27037) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (27047) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (27047) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (27057) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (27737) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (27737) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (28737) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (28737) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (29447) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (29447) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (29447) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (29457) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29457) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (29467) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (29477) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (29477) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29487) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (29497) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (29497) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (29597) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (29597) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (29597) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (29607) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29607) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (29617) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (29737) temp_sensor: Raw: 848, Voltage: 0.839 V, Temp: -189.25 °C[0m
+[0;32mI (29737) temp_ctrl: T=-189.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (30737) temp_sensor: Raw: 817, Voltage: 0.809 V, Temp: -192.25 °C[0m
+[0;32mI (30737) temp_ctrl: T=-192.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (31737) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (31737) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (32007) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (32007) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (32007) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (32017) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32017) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (32027) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (32037) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (32037) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32047) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (32057) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (32057) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (32157) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (32157) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (32157) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (32167) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32167) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (32177) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (32737) temp_sensor: Raw: 833, Voltage: 0.824 V, Temp: -190.75 °C[0m
+[0;32mI (32737) temp_ctrl: T=-190.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33737) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (33737) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (34567) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (34567) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (34567) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (34577) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34577) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (34587) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (34597) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (34597) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34607) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (34617) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (34617) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (34717) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (34717) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (34717) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (34727) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34727) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (34737) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (34737) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (34757) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (35757) temp_sensor: Raw: 896, Voltage: 0.887 V, Temp: -184.45 °C[0m
+[0;32mI (35757) temp_ctrl: T=-184.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (36757) temp_sensor: Raw: 1249, Voltage: 1.236 V, Temp: -149.55 °C[0m
+[0;32mI (36757) temp_ctrl: T=-149.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (37127) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (37127) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (37127) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (37137) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37137) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (37147) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (37157) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (37157) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37167) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (37177) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (37177) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (37277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (37277) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (37277) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (37287) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37287) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (37297) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (37757) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (37757) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (38757) temp_sensor: Raw: 1696, Voltage: 1.678 V, Temp: -105.35 °C[0m
+[0;32mI (38757) temp_ctrl: T=-105.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (39687) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (39687) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (39687) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (39697) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39697) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (39707) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (39717) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (39717) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39727) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (39737) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (39737) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (39757) temp_sensor: Raw: 1328, Voltage: 1.314 V, Temp: -141.75 °C[0m
+[0;32mI (39757) temp_ctrl: T=-141.75 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (39837) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (39837) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (39837) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (39847) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39847) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (39857) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (40757) temp_sensor: Raw: 1249, Voltage: 1.236 V, Temp: -149.55 °C[0m
+[0;32mI (40757) temp_ctrl: T=-149.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41757) temp_sensor: Raw: 688, Voltage: 0.681 V, Temp: -205.05 °C[0m
+[0;32mI (41757) temp_ctrl: T=-205.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (42247) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (42247) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (42247) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (42257) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42257) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (42267) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (42277) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (42277) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42287) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (42297) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (42297) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (42397) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (42397) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (42397) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (42407) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42407) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (42417) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (42757) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (42757) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (43757) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (43757) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44757) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (44757) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44807) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (44807) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (44807) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (44817) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (44817) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (44827) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (44837) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (44837) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (44847) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (44857) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (44857) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (44957) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (44957) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (44957) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (44967) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (44967) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (44977) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (45757) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (45757) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (46757) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (46757) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (47367) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (47367) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (47367) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (47377) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47377) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (47387) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (47397) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (47397) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47407) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (47417) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (47417) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (47517) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (47517) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (47517) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (47527) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47527) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (47537) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (47757) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (47757) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (48757) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (48757) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (49757) temp_sensor: Raw: 2017, Voltage: 1.995 V, Temp: -73.65 °C[0m
+[0;32mI (49757) temp_ctrl: T=-73.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (49927) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (49927) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (49927) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (49937) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (49937) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (49947) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (49957) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (49957) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (49967) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (49977) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (49977) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (50077) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (50077) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (50077) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (50087) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (50087) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (50097) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (50757) temp_sensor: Raw: 2400, Voltage: 2.372 V, Temp: -35.95 °C[0m
+[0;32mI (50757) temp_ctrl: T=-35.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (51757) temp_sensor: Raw: 2416, Voltage: 2.388 V, Temp: -34.35 °C[0m
+[0;32mI (51757) temp_ctrl: T=-34.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (52487) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (52487) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (52487) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (52497) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (52497) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (52507) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (52517) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (52517) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (52527) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (52537) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (52537) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (52637) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (52637) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (52637) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (52647) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (52647) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (52657) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (52757) temp_sensor: Raw: 2209, Voltage: 2.184 V, Temp: -54.75 °C[0m
+[0;32mI (52757) temp_ctrl: T=-54.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (53757) temp_sensor: Raw: 1984, Voltage: 1.963 V, Temp: -76.85 °C[0m
+[0;32mI (53757) temp_ctrl: T=-76.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (54757) temp_sensor: Raw: 1825, Voltage: 1.805 V, Temp: -92.65 °C[0m
+[0;32mI (54757) temp_ctrl: T=-92.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (55047) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (55047) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (55047) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (55057) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (55057) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (55067) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (55077) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (55077) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (55087) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (55097) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (55097) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (55197) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (55197) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (55197) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (55207) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (55207) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (55217) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (55757) temp_sensor: Raw: 1825, Voltage: 1.805 V, Temp: -92.65 °C[0m
+[0;32mI (55757) temp_ctrl: T=-92.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (56757) temp_sensor: Raw: 1952, Voltage: 1.931 V, Temp: -80.05 °C[0m
+[0;32mI (56757) temp_ctrl: T=-80.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (57607) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (57607) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (57607) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (57617) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (57617) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (57627) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (57637) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (57637) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (57647) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (57657) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (57657) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (57757) temp_sensor: Raw: 1168, Voltage: 1.156 V, Temp: -157.55 °C[0m
+[0;32mI (57757) temp_ctrl: T=-157.55 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (57757) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (57757) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (57767) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (57767) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (57777) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (57787) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (58757) temp_sensor: Raw: 1040, Voltage: 1.029 V, Temp: -170.25 °C[0m
+[0;32mI (58757) temp_ctrl: T=-170.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (59757) temp_sensor: Raw: 1152, Voltage: 1.140 V, Temp: -159.15 °C[0m
+[0;32mI (59757) temp_ctrl: T=-159.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (60167) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (60167) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (60167) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (60177) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (60187) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (60187) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (60197) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (60207) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (60207) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (60217) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (60227) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (60327) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (60327) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (60327) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (60327) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (60337) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (60347) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (60757) temp_sensor: Raw: 1537, Voltage: 1.521 V, Temp: -121.05 °C[0m
+[0;32mI (60757) temp_ctrl: T=-121.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (61757) temp_sensor: Raw: 497, Voltage: 0.491 V, Temp: -224.05 °C[0m
+[0;32mI (61757) temp_ctrl: T=-224.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (62727) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (62727) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (62727) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (62737) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (62737) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (62747) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (62757) temp_sensor: Raw: 593, Voltage: 0.586 V, Temp: -214.55 °C[0m
+[0;32mI (62757) temp_ctrl: T=-214.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (62767) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (62777) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (62777) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (62787) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (62797) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (62897) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (62897) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (62897) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (62897) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (62907) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (62917) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (63767) temp_sensor: Raw: 689, Voltage: 0.682 V, Temp: -204.95 °C[0m
+[0;32mI (63767) temp_ctrl: T=-204.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (64767) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (64767) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (65297) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (65297) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (65307) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (65307) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (65317) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (65327) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (65327) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (65337) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (65337) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (65347) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (65357) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (65457) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (65457) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (65457) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (65457) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (65467) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (65477) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (65767) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (65767) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (66767) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (66767) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (67767) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (67767) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (67857) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (67857) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (67867) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (67867) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (67877) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (67887) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (67887) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (67897) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (67897) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (67907) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (67917) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (68017) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (68017) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (68017) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (68017) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (68027) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (68037) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (68767) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (68767) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (69767) temp_sensor: Raw: 2480, Voltage: 2.451 V, Temp: -28.05 °C[0m
+[0;32mI (69767) temp_ctrl: T=-28.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (70417) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (70417) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (70427) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (70427) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (70437) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (70447) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (70447) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (70457) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (70457) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (70467) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (70477) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (70577) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (70577) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (70577) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (70577) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (70587) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (70597) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (70767) temp_sensor: Raw: 2977, Voltage: 2.942 V, Temp: 21.05 °C[0m
+[0;32mI (70767) temp_ctrl: T=21.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (71767) temp_sensor: Raw: 3201, Voltage: 3.161 V, Temp: 42.95 °C[0m
+[0;32mI (71767) temp_ctrl: T=42.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (72767) temp_sensor: Raw: 2720, Voltage: 2.688 V, Temp: -4.35 °C[0m
+[0;32mI (72767) temp_ctrl: T=-4.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (72977) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (72977) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (72987) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (72987) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (72997) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (73007) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (73007) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (73017) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (73017) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (73027) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (73037) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (73137) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (73137) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (73137) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (73137) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (73147) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (73157) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (73767) temp_sensor: Raw: 2657, Voltage: 2.626 V, Temp: -10.55 °C[0m
+[0;32mI (73767) temp_ctrl: T=-10.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (74767) temp_sensor: Raw: 2736, Voltage: 2.704 V, Temp: -2.75 °C[0m
+[0;32mI (74767) temp_ctrl: T=-2.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (75537) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (75537) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (75547) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (75547) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (75557) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (75567) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (75567) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (75577) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (75577) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (75587) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (75597) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (75697) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (75697) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (75697) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (75697) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (75707) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (75717) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (75767) temp_sensor: Raw: 2737, Voltage: 2.705 V, Temp: -2.65 °C[0m
+[0;32mI (75767) temp_ctrl: T=-2.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (76767) temp_sensor: Raw: 2592, Voltage: 2.562 V, Temp: -16.95 °C[0m
+[0;32mI (76767) temp_ctrl: T=-16.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (77767) temp_sensor: Raw: 2688, Voltage: 2.657 V, Temp: -7.45 °C[0m
+[0;32mI (77767) temp_ctrl: T=-7.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (78097) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (78097) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (78107) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (78107) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (78117) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (78127) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (78127) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (78137) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (78137) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (78147) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (78157) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (78257) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (78257) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (78257) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (78257) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (78267) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (78277) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (78767) temp_sensor: Raw: 2736, Voltage: 2.704 V, Temp: -2.75 °C[0m
+[0;32mI (78767) temp_ctrl: T=-2.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (79767) temp_sensor: Raw: 2721, Voltage: 2.689 V, Temp: -4.25 °C[0m
+[0;32mI (79767) temp_ctrl: T=-4.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (80657) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (80657) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (80667) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (80667) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (80677) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (80687) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (80687) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (80697) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (80697) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (80707) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (80717) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (80767) temp_sensor: Raw: 2657, Voltage: 2.626 V, Temp: -10.55 °C[0m
+[0;32mI (80767) temp_ctrl: T=-10.55 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (80817) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (80817) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (80817) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (80817) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (80827) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (80837) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (8757) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 I (9807) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (9807) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10807) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (10807) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11547) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (11547) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (11547) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (11557) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11557) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (11567) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11577) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (11587) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11587) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11597) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (11607) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (11707) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11707) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (11707) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (11707) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11717) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11727) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (11807) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (11807) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12807) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (12807) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13807) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (13807) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14107) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (14107) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (14107) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (14117) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14117) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (14127) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14137) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (14147) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14147) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14157) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (14167) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (14267) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14267) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (14267) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (14267) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14277) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14287) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (14807) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (14807) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15807) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (15807) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16667) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (16667) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (16667) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (16677) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16677) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (16687) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16697) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (16707) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16707) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16717) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (16727) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (16807) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (16807) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (16827) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16827) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (16827) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (16827) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16837) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16847) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (17807) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (17807) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18807) temp_sensor: Raw: 2369, Voltage: 2.343 V, Temp: -38.85 °C[0m
+[0;32mI (18807) temp_ctrl: T=-38.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19227) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (19227) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (19227) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (19237) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19237) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (19247) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19257) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (19267) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19267) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19277) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (19287) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (19387) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19387) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (19387) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (19387) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19397) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19407) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (19807) temp_sensor: Raw: 2385, Voltage: 2.358 V, Temp: -37.35 °C[0m
+[0;32mI (19807) temp_ctrl: T=-37.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20807) temp_sensor: Raw: 2192, Voltage: 2.167 V, Temp: -56.45 °C[0m
+[0;32mI (20807) temp_ctrl: T=-56.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21787) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (21787) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (21787) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (21797) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21797) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (21807) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21807) temp_sensor: Raw: 1985, Voltage: 1.964 V, Temp: -76.75 °C[0m
+[0;32mI (21827) temp_ctrl: T=-76.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21827) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (21837) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21837) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21847) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (21857) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (21957) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21957) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (21957) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (21957) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21967) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21977) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (22827) temp_sensor: Raw: 1984, Voltage: 1.963 V, Temp: -76.85 °C[0m
+[0;32mI (22827) temp_ctrl: T=-76.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23827) temp_sensor: Raw: 2064, Voltage: 2.041 V, Temp: -69.05 °C[0m
+[0;32mI (23827) temp_ctrl: T=-69.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24357) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (24357) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (24357) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (24367) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24377) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (24387) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24387) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (24397) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24397) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24407) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (24417) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (24517) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24517) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (24517) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (24517) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24527) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24537) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (24827) temp_sensor: Raw: 2576, Voltage: 2.546 V, Temp: -18.55 °C[0m
+[0;32mI (24827) temp_ctrl: T=-18.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25827) temp_sensor: Raw: 2272, Voltage: 2.247 V, Temp: -48.45 °C[0m
+[0;32mI (25827) temp_ctrl: T=-48.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3752) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 I (4802) temp_sensor: Raw: 801, Voltage: 0.793 V, Temp: -193.85 °C[0m
+[0;32mI (4802) temp_ctrl: T=-193.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (5802) temp_sensor: Raw: 784, Voltage: 0.776 V, Temp: -195.55 °C[0m
+[0;32mI (5802) temp_ctrl: T=-195.55 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (6422) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (6422) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (6422) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (6432) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6432) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (6442) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6452) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (6462) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6462) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6472) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (6472) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (6582) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6582) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (6582) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (6582) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6592) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6602) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (6802) temp_sensor: Raw: 769, Voltage: 0.761 V, Temp: -197.05 °C[0m
+[0;32mI (6802) temp_ctrl: T=-197.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (7802) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (7802) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8802) temp_sensor: Raw: 768, Voltage: 0.760 V, Temp: -197.15 °C[0m
+[0;32mI (8802) temp_ctrl: T=-197.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8982) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (8982) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (8982) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (8992) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (8992) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (9002) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9012) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (9022) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9022) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9032) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (9032) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (9142) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9142) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (9142) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (9142) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9152) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9162) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (9802) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (9802) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10802) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (10802) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11542) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (11542) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (11542) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (11552) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11552) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (11562) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11572) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (11582) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11582) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11592) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (11602) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (11702) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11702) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (11702) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (11702) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11712) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11722) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (11802) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (11802) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12802) temp_sensor: Raw: 752, Voltage: 0.744 V, Temp: -198.75 °C[0m
+[0;32mI (12802) temp_ctrl: T=-198.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13802) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (13802) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14102) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (14102) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (14102) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (14112) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14122) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (14122) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14132) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (14142) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14142) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14152) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (14162) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (14262) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14262) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (14262) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (14262) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14272) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14282) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (14802) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (14802) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15802) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (15802) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16662) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (16662) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (16662) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (16672) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16672) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (16682) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16692) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (16702) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16702) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16712) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (16722) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (16802) temp_sensor: Raw: 753, Voltage: 0.745 V, Temp: -198.65 °C[0m
+[0;32mI (16802) temp_ctrl: T=-198.65 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (16822) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16822) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (16822) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (16822) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16832) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16842) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (17802) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (17802) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18802) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (18802) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19222) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (19222) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (19222) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (19232) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19232) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (19242) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19252) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (19262) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19262) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19272) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (19282) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (19382) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19382) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (19382) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (19382) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19392) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19402) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (19802) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (19802) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20802) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (20802) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21782) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (21782) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (21782) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (21792) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21792) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (21802) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21802) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (21822) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21822) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (21832) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21832) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21842) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (21852) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (21952) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21952) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (21952) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (21952) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21962) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21972) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (22822) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (22822) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23822) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (23822) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24352) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (24352) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (24352) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (24362) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24372) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (24382) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24382) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (24392) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24392) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24402) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (24412) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (24512) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24512) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (24512) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (24512) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24522) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24532) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (24822) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (24822) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25822) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (25822) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26822) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (26822) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26912) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (26912) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (26912) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (26922) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26932) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (26942) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (26942) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (26952) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26952) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (26962) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (26972) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (27072) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (27072) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (27072) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (27072) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (27082) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (27092) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (27822) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (27822) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (4762) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 I (5812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (5812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (6432) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (6432) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (6432) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (6442) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6442) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (6452) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6462) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (6472) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6472) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6482) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (6482) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (6592) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6592) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (6592) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (6592) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (6602) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (6612) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (6812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (6812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (7812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (7812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (8812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8992) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (8992) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (8992) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (9002) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9002) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (9012) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9022) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (9032) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9032) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9042) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (9042) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (9152) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9152) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (9152) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (9152) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (9162) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (9172) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (9812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (9812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (10812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11552) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (11552) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (11552) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (11562) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11562) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (11572) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11582) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (11592) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11592) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11602) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (11612) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (11712) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (11712) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (11712) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (11712) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (11722) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (11732) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (11812) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (11812) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12812) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (12812) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13812) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (13812) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14112) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (14112) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (14112) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (14122) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14132) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (14132) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14142) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (14152) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14152) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14162) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (14172) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (14272) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (14272) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (14272) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (14272) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (14282) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (14292) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (14812) temp_sensor: Raw: 720, Voltage: 0.713 V, Temp: -201.85 °C[0m
+[0;32mI (14812) temp_ctrl: T=-201.85 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15812) temp_sensor: Raw: 721, Voltage: 0.714 V, Temp: -201.75 °C[0m
+[0;32mI (15812) temp_ctrl: T=-201.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16672) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (16672) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (16672) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (16682) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16682) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (16692) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16702) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (16712) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16712) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16722) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (16732) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (16812) temp_sensor: Raw: 737, Voltage: 0.729 V, Temp: -200.25 °C[0m
+[0;32mI (16812) temp_ctrl: T=-200.25 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (16832) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (16832) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (16832) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (16832) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (16842) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (16852) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (17812) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (17812) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18812) temp_sensor: Raw: 736, Voltage: 0.728 V, Temp: -200.35 °C[0m
+[0;32mI (18812) temp_ctrl: T=-200.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19232) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (19232) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (19232) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (19242) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19252) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (19252) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19262) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (19272) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19272) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19282) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (19292) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (19392) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19392) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (19392) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (19392) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (19402) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (19412) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (19812) temp_sensor: Raw: 2784, Voltage: 2.751 V, Temp: 1.95 °C[0m
+[0;32mI (19812) temp_ctrl: T=1.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20812) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (20812) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21792) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (21792) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (21792) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (21802) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21802) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (21812) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21812) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (21832) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21832) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (21842) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21842) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21852) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (21862) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (21962) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21962) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (21962) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (21962) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (21972) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (21982) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (22832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (22832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (23832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24362) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (24362) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (24362) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (24372) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24382) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (24392) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24392) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (24402) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24402) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24412) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (24422) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (24522) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24522) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (24522) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (24522) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (24532) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (24542) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (24832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (24832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (25832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (26832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26922) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (26922) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (26922) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (26932) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26942) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (26952) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (26952) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (26962) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (26962) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (26972) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (26982) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (27082) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (27082) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (27082) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (27082) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (27092) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (27102) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (27832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (27832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (28832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (28832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (29482) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (29482) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (29482) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (29492) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29502) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (29512) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (29512) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (29522) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29522) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (29532) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (29542) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (29642) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (29642) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (29642) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (29642) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (29652) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (29662) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (29832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (29832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (30832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (30832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (31832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (31832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (32042) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (32042) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (32042) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (32052) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32062) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (32072) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (32072) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (32082) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32082) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (32092) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (32102) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (32202) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (32202) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (32202) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (32202) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (32212) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (32222) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (32832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (32832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33832) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (33832) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (34602) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (34602) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (34602) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (34612) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34622) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (34632) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (34632) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (34642) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34642) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (34652) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (34662) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (34762) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (34762) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (34762) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (34762) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (34772) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (34782) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (34832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (34832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (35832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (35832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (36832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (36832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (37162) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (37162) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (37162) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (37172) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37182) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (37192) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (37192) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (37202) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37202) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (37212) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (37222) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (37322) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (37322) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (37322) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (37322) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (37332) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (37342) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (37832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (37832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (38832) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (38832) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (39722) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (39722) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (39722) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (39732) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39742) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (39752) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (39752) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (39762) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39762) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (39772) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (39782) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (39832) temp_sensor: Raw: 3729, Voltage: 3.682 V, Temp: 95.05 °C[0m
+[0;32mI (39832) temp_ctrl: T=95.05 C -> power=0.0% (target=0.0 C)[0m
+[0;33mW (39882) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (39882) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (39882) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (39882) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (39892) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (39902) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (40832) temp_sensor: Raw: 3712, Voltage: 3.665 V, Temp: 93.35 °C[0m
+[0;32mI (40832) temp_ctrl: T=93.35 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (41832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (42282) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (42282) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (42282) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (42292) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42302) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (42312) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (42312) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (42322) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42322) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (42332) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (42342) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (42442) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (42442) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (42442) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (42442) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (42452) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (42462) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (42832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (42832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (43832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (43832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (44832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44842) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (44842) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (44842) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (44852) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (44862) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (44872) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (44872) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (44882) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (44882) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (44892) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (44902) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (45002) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (45002) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (45002) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (45002) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (45012) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (45022) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (45832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (45832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (46832) temp_sensor: Raw: 3713, Voltage: 3.666 V, Temp: 93.45 °C[0m
+[0;32mI (46832) temp_ctrl: T=93.45 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (47402) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 5[0m
+[0;32mI (47402) chip[DL]: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (47402) chip[DL]: WiFi station state change: Connecting -> Connecting_Failed[0m
+[0;33mW (47412) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47422) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;33mW (47432) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (47432) chip[DL]: WiFi station state change: Connecting_Failed -> NotConnected[0m
+[0;33mW (47442) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47442) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (47452) chip[DL]: Next WiFi station reconnect in 100 ms[0m
+[0;32mI (47462) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;33mW (47562) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (47562) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (47562) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;33mW (47562) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (47572) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (47582) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (47832) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (47832) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (48832) temp_sensor: Raw: 3728, Voltage: 3.681 V, Temp: 94.95 °C[0m
+[0;32mI (48832) temp_ctrl: T=94.95 C -> power=0.0% (target=0.0 C)[0m

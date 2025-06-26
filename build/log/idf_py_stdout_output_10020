@@ -1,0 +1,1441 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x5c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40022ee0
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x16b8
+load:0x4086c110,len:0xe84
+load:0x4086e610,len:0x3054
+entry 0x4086c11a
+[0;32mI (23) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 10 2025 18:52:29[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 esp_secure_cert  unknown          3f 06 0000d000 00002000[0m
+[0;32mI (58) boot:  1 nvs              WiFi data        01 02 00010000 0000c000[0m
+[0;32mI (64) boot:  2 nvs_keys         NVS keys         01 04 0001c000 00001000[0m
+[0;32mI (71) boot:  3 otadata          OTA data         01 00 0001d000 00002000[0m
+[0;32mI (77) boot:  4 phy_init         RF data          01 01 0001f000 00001000[0m
+[0;32mI (84) boot:  5 ota_0            OTA app          00 10 00020000 001e0000[0m
+[0;32mI (90) boot:  6 ota_1            OTA app          00 11 00200000 001e0000[0m
+[0;32mI (97) boot:  7 fctry            WiFi data        01 02 003e0000 00006000[0m
+[0;32mI (103) boot: End of partition table[0m
+[0;32mI (107) esp_image: segment 0: paddr=00020020 vaddr=42140020 size=3a068h (237672) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=0005a090 vaddr=40800000 size=05f88h ( 24456) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=13fd58h (1310040) map[0m
+[0;32mI (406) esp_image: segment 3: paddr=0019fd80 vaddr=40805f88 size=18bbch (101308) load[0m
+[0;32mI (428) esp_image: segment 4: paddr=001b8944 vaddr=4081eb50 size=0448ch ( 17548) load[0m
+[0;32mI (433) esp_image: segment 5: paddr=001bcdd8 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (454) cpu_start: Unicore app[0m
+[0;32mI (462) cpu_start: Pro cpu start user code[0m
+[0;32mI (462) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (463) app_init: Project name:     light[0m
+[0;32mI (466) app_init: App version:      1.0[0m
+[0;32mI (470) app_init: Compile time:     Jun 10 2025 18:52:16[0m
+[0;32mI (475) app_init: ELF file SHA256:  355f3534c...[0m
+[0;32mI (479) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (483) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (487) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (491) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (494) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (501) heap_init: At 40836B80 len 00045A90 (278 KiB): RAM[0m
+[0;32mI (506) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (511) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM[0m
+[0;32mI (517) spi_flash: detected chip: generic[0m
+[0;32mI (520) spi_flash: flash io: dio[0m
+[0;33mW (523) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (537) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (541) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (548) coexist: coex firmware version: e727207[0m
+[0;32mI (552) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (557) main_task: Calling app_main()[0m
+[0;32mI (577) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (577) temp_sensor: ADC calibration enabled[0m
+[0;32mI (577) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (587) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (597) app_main: Floor (as Dimmable Light) created with endpoint_id 1[0m
+[0;32mI (597) app_main: Socket (as On/Off Plugin) created with endpoint_id 2[0m
+[0;32mI (607) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (617) app_driver: App driver initialized for Socket on GPIO 4[0m
+[0;32mI (617) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (627) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (637) wifi:wifi driver task: 408444a0, prio:23, stack:6656, core=0[0m
+[0;32mI (637) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (637) wifi:wifi certification version: v7.0[0m
+[0;32mI (637) wifi:config NVS flash: enabled[0m
+[0;32mI (647) wifi:config nano formatting: disabled[0m
+[0;32mI (647) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (657) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (657) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (667) wifi:Init management short buffer num: 32[0m
+[0;32mI (667) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (667) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (677) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (677) wifi:Init static rx buffer num: 10[0m
+[0;32mI (687) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (687) wifi_init: rx ba win: 6[0m
+[0;32mI (697) wifi_init: accept mbox: 6[0m
+[0;32mI (697) wifi_init: tcpip mbox: 32[0m
+[0;32mI (697) wifi_init: udp mbox: 6[0m
+[0;32mI (697) wifi_init: tcp mbox: 6[0m
+[0;32mI (707) wifi_init: tcp tx win: 5760[0m
+[0;32mI (707) wifi_init: tcp rx win: 5760[0m
+[0;32mI (707) wifi_init: tcp mss: 1440[0m
+[0;32mI (717) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (717) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (717) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (747) chip[DL]: NVS set: chip-counters/reboot-count = 14 (0xE)[0m
+[0;32mI (747) chip[DL]: Real time clock set to 946684800 (2000-01-01 00:00:00 UTC)[0m
+[0;32mI (747) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (747) BLE_INIT: ble controller commit:[c0eafd3][0m
+[0;32mI (757) BLE_INIT: Bluetooth MAC: f0:f5:bd:10:29:1e[0m
+[0;32mI (757) phy_init: phy_version 330,4af1121,Feb  6 2025,14:39:13[0m
+[0;32mI (837) phy: libbtbb version: 99f6adc, Feb  6 2025, 14:39:27[0m
+[0;32mI (847) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (847) CHIP[DL]: BLE host-controller synced[0m
+[0;32mI (1347) chip[DL]: Starting ESP WiFi layer[0m
+[0;33mW (1347) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1347) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1347) wifi:(agc)0x600a7128:0xd2130a02, min.avgNF:0xce->0xd2(dB), RCalCount:0x130, min.RRssi:0xa02(-95.88)[0m
+[0;33mW (1357) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
+[0;33mW (1367) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
+[0;33mW (1377) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
+[0;33mW (1387) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
+[0;33mW (1397) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
+[0;32mI (1407) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1407) wifi:mode : sta (f0:f5:bd:10:29:1c)[0m
+[0;32mI (1417) wifi:enable tsf[0m
+[0;32mI (1417) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 43[0m
+[0;33mW (1417) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1427) chip[DL]: Attempting to connect WiFi station interface[0m
+[0;32mI (1437) chip[DL]: WiFi station state change: NotConnected -> Connecting[0m
+[0;32mI (1437) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 2[0m
+[0;33mW (1447) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (1447) chip[DL]: Failed to get configured network when updating network status: Error ESP32:0x0500300F[0m
+[0;32mI (1457) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1467) chip[SVR]: Initializing subscription resumption storage...[0m
+[0;32mI (1477) chip[SVR]: Server initializing...[0m
+[0;32mI (1477) chip[TS]: Last Known Good Time: 2023-10-14T01:16:48[0m
+[0;32mI (1477) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1487) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1497) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1497) chip[FP]: Fabric index 0x1 was retrieved from storage. Compressed FabricId 0xCD0B2973C60C3EB4, FabricId 0x0000000000000001, NodeId 0x000000000000011E, VendorId 0x132F[0m
+[0;32mI (1517) chip[DMG]: AccessControl: initializing[0m
+[0;32mI (1517) chip[DMG]: Examples::AccessControlDelegate::Init[0m
+[0;32mI (1527) chip[DMG]: AccessControl: setting[0m
+[0;32mI (1527) chip[DMG]: DefaultAclStorage: initializing[0m
+[0;32mI (1527) chip[DMG]: DefaultAclStorage: 1 entries loaded[0m
+[0;32mI (1537) chip[SVR]: WARNING: mTestEventTriggerDelegate is null[0m
+[0;32mI (1507) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1547) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 43[0m
+[0;32mI (1547) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1567) chip[ZCL]: Using ZAP configuration...[0m
+[0;32mI (1567) esp_matter_cluster: Cluster plugin init common callback[0m
+[0;32mI (1567) chip[DMG]: AccessControlCluster: initializing[0m
+[0;32mI (1577) chip[ZCL]: WRITE ERR: ep 0 clus 0x0000_0030 attr 0x0000_0000 not supported[0m
+[0;32mI (1577) chip[ZCL]: Initiating Admin Commissioning cluster.[0m
+[0;32mI (1587) chip[SVR]: Fabric already commissioned. Disabling BLE advertisement[0m
+[0;32mI (1597) chip[IN]: CASE Server enabling CASE session setups[0m
+[0;32mI (1597) chip[SVR]: Joining Multicast groups[0m
+[0;32mI (1577) wifi:(trc)phytype:CBW20-SGI, snr:26, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1607) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1617) wifi:(trc)band:2G, rate(L-MCS4, rateIdx:4), ampdu(rate:L-MCS4, schedIdx(4, stop:8)), snr:26, ampduState:wait operational[0m
+[0;32mI (1627) wifi:ifidx:0, rssi:-70, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1637) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (1617) chip[SVR]: Server Listening...[0m
+[1;31mE (1647) chip[SVR]: Cound not find endpoint index for endpoint 0[0m
+[0;32mI (1657) esp_matter_core: Dynamic endpoint 0 added[0m
+[0;32mI (1657) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000003's Attribute 0x00000001 is 1 **********[0m
+[0;32mI (1667) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1677) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1687) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1697) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1717) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (1727) esp_matter_core: Dynamic endpoint 1 added[0m
+[0;32mI (1727) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000003's Attribute 0x00000001 is 2 **********[0m
+[0;32mI (1737) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x00000000 is 128 **********[0m
+[0;32mI (1747) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000004's Attribute 0x0000FFFC is 1 **********[0m
+[0;32mI (1757) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (1767) esp_matter_core: Dynamic endpoint 2 added[0m
+[0;32mI (1677) wifi:connected with A177-STAND, aid = 6, channel 8, BW20, bssid = 50:ff:20:40:31:67[0m
+[0;32mI (1787) wifi:security: WPA2-PSK, phy:11bgn, rssi:-70, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1797) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1797) wifi:pm start, type:1, aid:0x6, trans-BSSID:50:ff:20:40:31:67, BSSID[5]:0x67, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1807) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1817) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1827) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1837) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1847) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1857) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1867) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1867) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1877) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1887) chip[DL]: Posting ESPSystemEvent: Wifi Event with eventId : 4[0m
+[0;32mI (1897) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (1897) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (1907) main_task: Returned from app_main()[0m
+[0;33mW (1907) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x1006731, TALO:0x4020ff50, (ssn:3, win:64, cur_ssn:3), CONF:0xc0000005[0m
+[0;32mI (1917) chip[DL]: WIFI_EVENT_STA_START[0m
+[0;32mI (1927) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1927) chip[DL]: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (1937) chip[DL]: WiFi station state change: Connecting -> Connecting_Succeeded[0m
+[0;32mI (1937) chip[DL]: WiFi station state change: Connecting_Succeeded -> Connected[0m
+[0;32mI (1947) chip[DL]: WiFi station interface connected[0m
+[0;32mI (1957) chip[DL]: Done driving station state, nothing else to do...[0m
+[0;32mI (1957) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (1967) chip[DL]: Updating advertising data[0m
+[0;32mI (2907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (2907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3197) esp_netif_handlers: sta ip: 192.168.1.37, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3197) chip[DL]: Posting ESPSystemEvent: IP Event with eventId : 0[0m
+[0;32mI (3197) chip[DL]: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (3197) chip[DL]: IPv4 address changed on WiFi station interface: 192.168.1.37/255.255.255.0 gateway 192.168.1.1[0m
+[0;32mI (3207) chip[DL]: IPv4 Internet connectivity ESTABLISHED[0m
+[0;32mI (3217) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (3217) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (3227) chip[DIS]: Advertise operational node CD0B2973C60C3EB4-000000000000011E[0m
+[0;32mI (3237) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: CD0B2973C60C3EB4-000000000000011E.[0m
+[0;32mI (3247) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (3617) chip[DL]: Posting ESPSystemEvent: IP Event with eventId : 3[0m
+[0;32mI (3617) chip[DL]: IP_EVENT_GOT_IP6[0m
+[0;32mI (3617) chip[DL]: IPv6 addr available. Ready on WIFI_STA_DEF interface: fe80:0000:0000:0000:f2f5:bdff:fe10:291c[0m
+[0;32mI (3627) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (3627) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (3637) chip[DIS]: Advertise operational node CD0B2973C60C3EB4-000000000000011E[0m
+[0;32mI (3637) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: CD0B2973C60C3EB4-000000000000011E.[0m
+[0;32mI (3657) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (3657) chip[DIS]: Updating services using commissioning mode 0[0m
+[0;32mI (3657) chip[DIS]: CHIP minimal mDNS started advertising.[0m
+[0;32mI (3667) chip[DIS]: Advertise operational node CD0B2973C60C3EB4-000000000000011E[0m
+[0;32mI (3677) chip[DIS]: CHIP minimal mDNS configured as 'Operational device'; instance name: CD0B2973C60C3EB4-000000000000011E.[0m
+[0;32mI (3687) chip[DIS]: mDNS service published: _matter._tcp[0m
+[0;32mI (3687) chip[SVR]: Server initialization complete[0m
+[0;32mI (3697) chip[SWU]: Stopping the watchdog timer[0m
+[0;32mI (3697) chip[SWU]: Starting the periodic query timer, timeout: 86400 seconds[0m
+[0;32mI (3707) chip[IM]: Resuming 6 subscriptions in 30 seconds[0m
+[0;32mI (3707) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 0 **********[0m
+[0;32mI (3717) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 0 **********[0m
+[0;32mI (3727) esp_matter_attribute: ********** W : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000002 is 1 **********[0m
+[0;32mI (3747) esp_matter_attribute: ********** R : Endpoint 0x0000's Cluster 0x0000002A's Attribute 0x00000003 is null **********[0m
+[0;32mI (3907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (3907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (3967) chip[DL]: BLE deinit successful and memory reclaimed[0m
+[0;32mI (4907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (4907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (5907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (5907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (6907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (6907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (7907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (7907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (8907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (8907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (9907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (9907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (10907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (10907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (11907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (11907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (12907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (12907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (13907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (14907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (14907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (15907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (16907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (17907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (17907) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18907) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (18907) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19907) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (19907) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20117) chip[EM]: >>> [E:63925r S:0 M:114524862] (U) Msg RX from 0:8F1538F44A166FB3 [0000] to 0000000000000000 --- Type 0000:30 (SecureChannel:CASE_Sigma1) (B:234)[0m
+[0;32mI (20127) chip[IN]: CASE Server received Sigma1 message . Starting handshake. EC 0x40827cd0[0m
+[0;32mI (20137) chip[EM]: <<< [E:63925r S:0 M:132266431 (Ack:114524862)] (U) Msg TX from 0000000000000000 to 0:8F1538F44A166FB3 [0000] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (20157) chip[SC]: Received Sigma1 msg[0m
+[0;32mI (20157) chip[EM]: <<< [E:63925r S:0 M:132266432 (Ack:114524862)] (U) Msg TX from 0000000000000000 to 0:8F1538F44A166FB3 [0000] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:33 (SecureChannel:CASE_Sigma2Resume) (B:100)[0m
+[0;32mI (20177) chip[EM]: ??1 [E:63925r S:0 M:132266432] (U) Msg Retransmission to 0:0000000000000000 scheduled for 364ms from now [State:Active II:500 AI:300 AT:4000][0m
+[1;31mE (20227) chip[IN]: Secure transport received message on a session in an invalid state (state = 'kEstablishing')[0m
+[0;32mI (20537) chip[EM]: <<1 [E:63925r S:0 M:132266432] (U) Msg Retransmission to 0:0000000000000000[0m
+[0;32mI (20537) chip[EM]: ??2 [E:63925r S:0 M:132266432] (U) Msg Retransmission to 0:0000000000000000 scheduled for 350ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (20577) chip[EM]: >>> [E:63925r S:0 M:114524864 (Ack:132266432)] (U) Msg RX from 0:8F1538F44A166FB3 [0000] to 0000000000000000 --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (20577) chip[EM]: >>> [E:63925r S:0 M:114524863 (Ack:132266432)] (U) Msg RX from 0:8F1538F44A166FB3 [0000] to 0000000000000000 --- Type 0000:40 (SecureChannel:StatusReport) (B:34)[0m
+[0;32mI (20597) chip[SC]: Success status report received. Session was established[0m
+[0;32mI (20627) chip[SC]: SecureSession[0x408262a0, LSID:18376]: State change 'kEstablishing' --> 'kActive'[0m
+[0;32mI (20627) chip[IN]: CASE Session established to peer: <0000000000000001, 1>[0m
+[0;32mI (20627) chip[EM]: <<< [E:63925r S:0 M:132266433 (Ack:114524863)] (U) Msg TX from 0000000000000000 to 0:8F1538F44A166FB3 [0000] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:26)[0m
+[0;32mI (20647) chip[EM]: >>> [E:63926r S:18376 M:256579910] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:59)[0m
+[0;32mI (20667) chip[DMG]: Final negotiated min/max parameters: Min = 30s, Max = 60s[0m
+[0;32mI (20687) chip[EM]: <<< [E:63926r S:18376 M:116630200 (Ack:256579910)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:75)[0m
+[0;32mI (20697) chip[EM]: ??1 [E:63926r S:18376 M:116630200] (S) Msg Retransmission to 1:0000000000000001 scheduled for 373ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (20727) chip[EM]: >>> [E:63926r S:18376 M:256579911 (Ack:116630200)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (20737) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (20737) chip[EM]: <<< [E:63926r S:18376 M:116630201 (Ack:256579911)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:04 (IM:SubscribeResponse) (B:48)[0m
+[0;32mI (20757) chip[EM]: ??1 [E:63926r S:18376 M:116630201] (S) Msg Retransmission to 1:0000000000000001 scheduled for 355ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (20777) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000000C454 and system Timestamp 0x0000000000013984.[0m
+[0;32mI (20787) chip[EM]: >>> [E:63926r S:18376 M:256579912 (Ack:116630201)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (20807) chip[EM]: >>> [E:63927r S:18376 M:256579913] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:02 (IM:ReadRequest) (B:73)[0m
+[1;31mE (20817) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0008, attributeId: 0x0000_0003err = 586[0m
+[1;31mE (20827) chip[DMG]: Fail to retrieve data, roll back and encode status on clusterId: 0x0000_0008, attributeId: 0x0000_0002err = 586[0m
+[0;32mI (20837) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (20857) chip[EM]: <<< [E:63927r S:18376 M:116630202 (Ack:256579913)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:116)[0m
+[0;32mI (20867) chip[EM]: ??1 [E:63927r S:18376 M:116630202] (S) Msg Retransmission to 1:0000000000000001 scheduled for 370ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (20897) chip[EM]: >>> [E:63928r S:18376 M:256579915] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (20897) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (20907) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (20917) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20917) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (20927) chip[EM]: <<< [E:63928r S:18376 M:116630203 (Ack:256579915)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (20947) chip[EM]: ??1 [E:63928r S:18376 M:116630203] (S) Msg Retransmission to 1:0000000000000001 scheduled for 366ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21237) chip[EM]: <<1 [E:63927r S:18376 M:116630202] (S) Msg Retransmission to 1:0000000000000001[0m
+[0;32mI (21237) chip[EM]: ??2 [E:63927r S:18376 M:116630202] (S) Msg Retransmission to 1:0000000000000001 scheduled for 378ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21257) chip[EM]: >>> [E:63928r S:18376 M:256579916 (Ack:116630203)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (21267) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (21277) chip[EM]: <<< [E:63928r S:18376 M:116630204 (Ack:256579916)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (21297) chip[EM]: ??1 [E:63928r S:18376 M:116630204] (S) Msg Retransmission to 1:0000000000000001 scheduled for 377ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21307) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000005523 and system Timestamp 0x0000000000373FBB.[0m
+[0;32mI (21317) chip[EM]: >>> [E:63927r S:18376 M:256579917 (Ack:116630202)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21337) chip[EM]: >>> [E:63929r S:18376 M:256579919] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (21357) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (21367) chip[EM]: <<< [E:63929r S:18376 M:116630205 (Ack:256579919)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (21377) chip[EM]: ??1 [E:63929r S:18376 M:116630205] (S) Msg Retransmission to 1:0000000000000001 scheduled for 389ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21667) chip[EM]: <<1 [E:63928r S:18376 M:116630204] (S) Msg Retransmission to 1:0000000000000001[0m
+[0;32mI (21667) chip[EM]: ??2 [E:63928r S:18376 M:116630204] (S) Msg Retransmission to 1:0000000000000001 scheduled for 410ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21697) chip[EM]: >>> [E:63929r S:18376 M:256579920 (Ack:116630205)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21697) chip[EM]: >>> [E:63930r S:18376 M:256579921] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (21717) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (21737) chip[EM]: >>> [E:63928r S:18376 M:256579922 (Ack:116630204)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21737) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (21757) chip[EM]: <<< [E:63930r S:18376 M:116630206 (Ack:256579921)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:73)[0m
+[0;32mI (21767) chip[EM]: ??1 [E:63930r S:18376 M:116630206] (S) Msg Retransmission to 1:0000000000000001 scheduled for 397ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21787) chip[EM]: >>> [E:63930r S:18376 M:256579921] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (21797) chip[EM]: <<< [E:63930r S:18376 M:116630207 (Ack:256579921)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21817) chip[EM]: >>> [E:63930r S:18376 M:256579923 (Ack:116630206)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (21837) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (21837) chip[EM]: <<< [E:63930r S:18376 M:116630208 (Ack:256579923)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (21857) chip[EM]: ??1 [E:63930r S:18376 M:116630208] (S) Msg Retransmission to 1:0000000000000001 scheduled for 401ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21877) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000000575A and system Timestamp 0x00000000003741F2.[0m
+[0;32mI (21887) chip[EM]: >>> [E:63930r S:18376 M:256579924 (Ack:116630208)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21907) chip[EM]: >>> [E:63931r S:18376 M:256579925] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (21917) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (21927) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21927) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (21937) chip[EM]: <<< [E:63931r S:18376 M:116630209 (Ack:256579925)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (21957) chip[EM]: ??1 [E:63931r S:18376 M:116630209] (S) Msg Retransmission to 1:0000000000000001 scheduled for 361ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (21977) chip[EM]: >>> [E:63931r S:18376 M:256579926 (Ack:116630209)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (21987) chip[EM]: >>> [E:63932r S:18376 M:256579927] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (22007) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (22027) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (22027) chip[EM]: <<< [E:63932r S:18376 M:116630210 (Ack:256579927)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:73)[0m
+[0;32mI (22047) chip[EM]: ??1 [E:63932r S:18376 M:116630210] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (22097) chip[EM]: >>> [E:63932r S:18376 M:256579928 (Ack:116630210)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (22097) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (22107) chip[EM]: <<< [E:63932r S:18376 M:116630211 (Ack:256579928)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (22127) chip[EM]: ??1 [E:63932r S:18376 M:116630211] (S) Msg Retransmission to 1:0000000000000001 scheduled for 332ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (22137) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000005865 and system Timestamp 0x00000000003742FD.[0m
+[0;32mI (22157) chip[EM]: >>> [E:63932r S:18376 M:256579929 (Ack:116630211)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (22177) chip[EM]: >>> [E:63933r S:18376 M:256579930] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:03 (IM:SubscribeRequest) (B:60)[0m
+[0;32mI (22187) chip[DMG]: Final negotiated min/max parameters: Min = 1s, Max = 3600s[0m
+[0;32mI (22207) chip[EM]: <<< [E:63933r S:18376 M:116630212 (Ack:256579930)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:78)[0m
+[0;32mI (22217) chip[EM]: ??1 [E:63933r S:18376 M:116630212] (S) Msg Retransmission to 1:0000000000000001 scheduled for 367ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (22267) chip[EM]: >>> [E:63933r S:18376 M:256579931 (Ack:116630212)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (22277) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (22277) chip[EM]: <<< [E:63933r S:18376 M:116630213 (Ack:256579931)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:04 (IM:SubscribeResponse) (B:49)[0m
+[0;32mI (22297) chip[EM]: ??1 [E:63933r S:18376 M:116630213] (S) Msg Retransmission to 1:0000000000000001 scheduled for 401ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (22317) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000005912 and system Timestamp 0x00000000003743AA.[0m
+[0;32mI (22327) chip[EM]: >>> [E:63933r S:18376 M:256579932 (Ack:116630213)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (22347) chip[EM]: >>> [E:63934r S:18376 M:256579933] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:02 (IM:ReadRequest) (B:51)[0m
+[0;32mI (22367) chip[EM]: <<< [E:63934r S:18376 M:116630214 (Ack:256579933)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (22377) chip[EM]: ??1 [E:63934r S:18376 M:116630214] (S) Msg Retransmission to 1:0000000000000001 scheduled for 406ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (22397) chip[EM]: >>> [E:63934r S:18376 M:256579934 (Ack:116630214)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (22927) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (22927) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23927) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (23927) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (24927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (25927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26927) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (26927) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (27927) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (27927) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (28927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (28927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (29927) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (29927) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (30927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (30927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (31927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (31927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (32927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (32927) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33707) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33707) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000000F6E0 and system Timestamp 0x0000000000016C10.[0m
+[0;32mI (33747) chip[IM]: Skip resuming live subscriptionId 3995151285[0m
+[0;32mI (33747) chip[IM]: Skip resuming live subscriptionId 1506331402[0m
+[0;32mI (33747) chip[IM]: Skip resuming live subscriptionId 494853640[0m
+[0;32mI (33747) chip[IM]: Skip resuming live subscriptionId 239411654[0m
+[0;32mI (33757) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33767) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x00000000000085CC and system Timestamp 0x0000000000377064.[0m
+[0;32mI (33807) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33807) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x00000000000085F3 and system Timestamp 0x000000000037708B.[0m
+[0;32mI (33837) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33837) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008611 and system Timestamp 0x00000000003770A9.[0m
+[0;32mI (33867) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33867) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008637 and system Timestamp 0x00000000003770CF.[0m
+[0;32mI (33907) chip[IM]: Skip resuming live subscriptionId 2198403804[0m
+[0;32mI (33907) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33917) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008660 and system Timestamp 0x00000000003770F8.[0m
+[0;32mI (33927) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (33937) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33957) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (33967) chip[EM]: <<< [E:65176i S:18376 M:116630215] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:70)[0m
+[0;32mI (33977) chip[EM]: ??1 [E:65176i S:18376 M:116630215] (S) Msg Retransmission to 1:0000000000000001 scheduled for 622ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (33997) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (34007) chip[EM]: <<< [E:65177i S:18376 M:116630216] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34017) chip[EM]: ??1 [E:65177i S:18376 M:116630216] (S) Msg Retransmission to 1:0000000000000001 scheduled for 640ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34037) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (34047) chip[EM]: <<< [E:65178i S:18376 M:116630217] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34067) chip[EM]: ??1 [E:65178i S:18376 M:116630217] (S) Msg Retransmission to 1:0000000000000001 scheduled for 554ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34077) chip[EM]: <<< [E:65179i S:18376 M:116630218] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (34097) chip[EM]: ??1 [E:65179i S:18376 M:116630218] (S) Msg Retransmission to 1:0000000000000001 scheduled for 635ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34107) chip[EM]: >>> [E:65176i S:18376 M:256579935 (Ack:116630215)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34127) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34127) chip[EM]: <<< [E:65176i S:18376 M:116630219 (Ack:256579935)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34157) chip[EM]: >>> [E:65177i S:18376 M:256579936 (Ack:116630216)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34167) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34177) chip[EM]: <<< [E:65177i S:18376 M:116630220 (Ack:256579936)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34197) chip[EM]: >>> [E:65178i S:18376 M:256579937 (Ack:116630217)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34207) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34217) chip[EM]: <<< [E:65178i S:18376 M:116630221 (Ack:256579937)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34237) chip[EM]: >>> [E:65179i S:18376 M:256579938 (Ack:116630218)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34247) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34257) chip[EM]: <<< [E:65179i S:18376 M:116630222 (Ack:256579938)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34767) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (34767) chip[EM]: <<< [E:65180i S:18376 M:116630223] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:70)[0m
+[0;32mI (34787) chip[EM]: ??1 [E:65180i S:18376 M:116630223] (S) Msg Retransmission to 1:0000000000000001 scheduled for 376ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34807) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (34807) chip[EM]: <<< [E:65181i S:18376 M:116630224] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34827) chip[EM]: ??1 [E:65181i S:18376 M:116630224] (S) Msg Retransmission to 1:0000000000000001 scheduled for 375ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34837) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (34857) chip[EM]: <<< [E:65182i S:18376 M:116630225] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34867) chip[EM]: ??1 [E:65182i S:18376 M:116630225] (S) Msg Retransmission to 1:0000000000000001 scheduled for 380ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34887) chip[EM]: <<< [E:65183i S:18376 M:116630226] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (34897) chip[EM]: ??1 [E:65183i S:18376 M:116630226] (S) Msg Retransmission to 1:0000000000000001 scheduled for 348ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34917) chip[EM]: >>> [E:65180i S:18376 M:256579939 (Ack:116630223)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34927) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (34937) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (34937) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (34947) chip[DMG]: Subscription id 0x399767e9 from node <0000000000000001, 1> torn down[0m
+[0;32mI (34967) chip[EM]: <<< [E:65180i S:18376 M:116630227 (Ack:256579939)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34977) chip[EM]: >>> [E:65181i S:18376 M:256579940 (Ack:116630224)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34987) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (35007) chip[DMG]: Subscription id 0x95cf0583 from node <0000000000000001, 1> torn down[0m
+[0;32mI (35017) chip[EM]: <<< [E:65181i S:18376 M:116630228 (Ack:256579940)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35027) chip[EM]: >>> [E:65182i S:18376 M:256579941 (Ack:116630225)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35047) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (35057) chip[DMG]: Subscription id 0x8b140b2e from node <0000000000000001, 1> torn down[0m
+[0;32mI (35067) chip[EM]: <<< [E:65182i S:18376 M:116630229 (Ack:256579941)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35077) chip[EM]: >>> [E:65183i S:18376 M:256579942 (Ack:116630226)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35087) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (35107) chip[DMG]: Subscription id 0xb609bc8c from node <0000000000000001, 1> torn down[0m
+[0;32mI (35117) chip[EM]: <<< [E:65183i S:18376 M:116630230 (Ack:256579942)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35127) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (35137) chip[EM]: <<< [E:65184i S:18376 M:116630231] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (35157) chip[EM]: ??1 [E:65184i S:18376 M:116630231] (S) Msg Retransmission to 1:0000000000000001 scheduled for 386ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (35167) chip[EM]: >>> [E:65184i S:18376 M:256579943 (Ack:116630231)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35187) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (35187) chip[EM]: <<< [E:65184i S:18376 M:116630232 (Ack:256579943)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35947) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (35947) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (36947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (36947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (37947) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (37947) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (38947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (38947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (39947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (39947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (40947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (40947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (41947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (42947) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (42947) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (43947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (43947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44947) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (44947) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (45947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (45947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (46947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (46947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (47947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (47947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (48947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (48947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (49947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (49947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (50777) chip[EM]: <<< [E:65185i S:18376 M:116630233] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:71)[0m
+[0;32mI (50787) chip[EM]: ??1 [E:65185i S:18376 M:116630233] (S) Msg Retransmission to 1:0000000000000001 scheduled for 627ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (50827) chip[EM]: >>> [E:65185i S:18376 M:256579944 (Ack:116630233)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (50837) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (50847) chip[EM]: <<< [E:65185i S:18376 M:116630234 (Ack:256579944)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (50947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (50947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (51947) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (51947) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (52947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (52947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (53947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (53947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (54947) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (54947) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (55947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (55947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (56947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (56947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (57947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (57947) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (58947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (58947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (59947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (59947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (60947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (60947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (61947) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (61947) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (62507) chip[EM]: >>> [E:63935r S:18376 M:256579945] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (62507) chip[EM]: <<< [E:63935r S:18376 M:116630235 (Ack:256579945)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (62527) chip[EM]: ??1 [E:63935r S:18376 M:116630235] (S) Msg Retransmission to 1:0000000000000001 scheduled for 352ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62547) chip[EM]: >>> [E:63935r S:18376 M:256579946 (Ack:116630235)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (62557) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (62567) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (62577) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (62577) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (62597) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (62607) app_driver: Socket command received: OFF[0m
+[0;32mI (62617) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (62617) chip[EM]: <<< [E:63935r S:18376 M:116630236 (Ack:256579946)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (62637) chip[EM]: ??1 [E:63935r S:18376 M:116630236] (S) Msg Retransmission to 1:0000000000000001 scheduled for 334ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62657) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (62667) chip[EM]: <<< [E:65186i S:18376 M:116630237] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (62677) chip[EM]: ??1 [E:65186i S:18376 M:116630237] (S) Msg Retransmission to 1:0000000000000001 scheduled for 387ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62697) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (62707) chip[EM]: <<< [E:65187i S:18376 M:116630238] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (62727) chip[EM]: ??1 [E:65187i S:18376 M:116630238] (S) Msg Retransmission to 1:0000000000000001 scheduled for 382ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62737) chip[EM]: >>> [E:63935r S:18376 M:256579947 (Ack:116630236)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (62757) chip[EM]: >>> [E:63936r S:18376 M:256579948] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (62767) chip[EM]: <<< [E:63936r S:18376 M:116630239 (Ack:256579948)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (62787) chip[EM]: ??1 [E:63936r S:18376 M:116630239] (S) Msg Retransmission to 1:0000000000000001 scheduled for 350ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62807) chip[EM]: >>> [E:65186i S:18376 M:256579949 (Ack:116630237)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (62817) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (62827) chip[EM]: <<< [E:65186i S:18376 M:116630240 (Ack:256579949)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (62847) chip[EM]: >>> [E:65187i S:18376 M:256579950 (Ack:116630238)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (62857) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (62867) chip[EM]: <<< [E:65187i S:18376 M:116630241 (Ack:256579950)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (62887) chip[EM]: >>> [E:63936r S:18376 M:256579951 (Ack:116630239)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (62897) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (62907) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (62917) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (62927) chip[EM]: <<< [E:63936r S:18376 M:116630242 (Ack:256579951)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (62947) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (62947) chip[EM]: ??1 [E:63936r S:18376 M:116630242] (S) Msg Retransmission to 1:0000000000000001 scheduled for 358ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (62967) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (62977) chip[EM]: >>> [E:63936r S:18376 M:256579952 (Ack:116630242)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (63717) chip[EM]: <<< [E:65188i S:18376 M:116630243] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:71)[0m
+[0;32mI (63727) chip[EM]: ??1 [E:65188i S:18376 M:116630243] (S) Msg Retransmission to 1:0000000000000001 scheduled for 366ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (63737) chip[EM]: >>> [E:65188i S:18376 M:256579953 (Ack:116630243)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (63757) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (63767) chip[DMG]: Subscription id 0xd7ea68cb from node <0000000000000001, 1> torn down[0m
+[0;32mI (63777) chip[EM]: <<< [E:65188i S:18376 M:116630244 (Ack:256579953)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (63967) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (63967) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (64667) chip[EM]: >>> [E:63937r S:18376 M:256579954] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (64667) chip[EM]: <<< [E:63937r S:18376 M:116630245 (Ack:256579954)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (64687) chip[EM]: ??1 [E:63937r S:18376 M:116630245] (S) Msg Retransmission to 1:0000000000000001 scheduled for 356ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (64697) chip[EM]: >>> [E:63937r S:18376 M:256579955 (Ack:116630245)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (64717) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (64727) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (64737) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (64737) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (64747) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (64757) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (64777) app_driver: Socket command received: ON[0m
+[0;32mI (64787) chip[EM]: <<< [E:63937r S:18376 M:116630246 (Ack:256579955)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (64797) chip[EM]: ??1 [E:63937r S:18376 M:116630246] (S) Msg Retransmission to 1:0000000000000001 scheduled for 346ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (64817) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (64827) chip[EM]: <<< [E:65189i S:18376 M:116630247] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (64837) chip[EM]: ??1 [E:65189i S:18376 M:116630247] (S) Msg Retransmission to 1:0000000000000001 scheduled for 350ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (64857) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (64867) chip[EM]: <<< [E:65190i S:18376 M:116630248] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (64887) chip[EM]: ??1 [E:65190i S:18376 M:116630248] (S) Msg Retransmission to 1:0000000000000001 scheduled for 336ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (64897) chip[EM]: >>> [E:63937r S:18376 M:256579956 (Ack:116630246)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (64917) chip[EM]: >>> [E:63938r S:18376 M:256579957] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (64927) chip[EM]: <<< [E:63938r S:18376 M:116630249 (Ack:256579957)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (64947) chip[EM]: ??1 [E:63938r S:18376 M:116630249] (S) Msg Retransmission to 1:0000000000000001 scheduled for 358ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (64957) chip[EM]: >>> [E:65189i S:18376 M:256579958 (Ack:116630247)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (64977) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (64967) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (64987) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (64997) chip[EM]: <<< [E:65189i S:18376 M:116630250 (Ack:256579958)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (65017) chip[EM]: >>> [E:65190i S:18376 M:256579959 (Ack:116630248)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (65027) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (65037) chip[EM]: <<< [E:65190i S:18376 M:116630251 (Ack:256579959)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (65057) chip[EM]: >>> [E:63938r S:18376 M:256579960 (Ack:116630249)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (65067) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (65077) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (65087) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (65097) chip[EM]: <<< [E:63938r S:18376 M:116630252 (Ack:256579960)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (65117) chip[EM]: ??1 [E:63938r S:18376 M:116630252] (S) Msg Retransmission to 1:0000000000000001 scheduled for 400ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (65377) chip[EM]: >>> [E:63938r S:18376 M:256579961 (Ack:116630252)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (65997) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (65997) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (66997) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (66997) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (67997) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (67997) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (68997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (68997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (69997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (69997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (70997) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (70997) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (71997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (71997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (72997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (72997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (73997) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (73997) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (74997) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (74997) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (75997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (75997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (76997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (76997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (77997) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (77997) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (78997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (78997) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (79997) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (79997) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (80837) chip[EM]: >>> [E:63939r S:18376 M:256579962] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (80837) chip[EM]: <<< [E:63939r S:18376 M:116630253 (Ack:256579962)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (80857) chip[EM]: ??1 [E:63939r S:18376 M:116630253] (S) Msg Retransmission to 1:0000000000000001 scheduled for 335ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (80877) chip[EM]: >>> [E:63939r S:18376 M:256579963 (Ack:116630253)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (80887) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (80897) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (80907) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (80907) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (80927) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (80937) app_driver: Socket command received: OFF[0m
+[0;32mI (80947) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (80947) chip[EM]: <<< [E:63939r S:18376 M:116630254 (Ack:256579963)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (80967) chip[EM]: ??1 [E:63939r S:18376 M:116630254] (S) Msg Retransmission to 1:0000000000000001 scheduled for 393ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (80987) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (80997) chip[EM]: <<< [E:65191i S:18376 M:116630255] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (81007) chip[EM]: ??1 [E:65191i S:18376 M:116630255] (S) Msg Retransmission to 1:0000000000000001 scheduled for 398ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81027) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (81037) chip[EM]: <<< [E:65192i S:18376 M:116630256] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (81057) chip[EM]: ??1 [E:65192i S:18376 M:116630256] (S) Msg Retransmission to 1:0000000000000001 scheduled for 353ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (80997) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (81077) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (81077) chip[EM]: >>> [E:63939r S:18376 M:256579964 (Ack:116630254)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (81097) chip[EM]: >>> [E:63940r S:18376 M:256579965] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (81107) chip[EM]: <<< [E:63940r S:18376 M:116630257 (Ack:256579965)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (81127) chip[EM]: ??1 [E:63940r S:18376 M:116630257] (S) Msg Retransmission to 1:0000000000000001 scheduled for 357ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81147) chip[EM]: >>> [E:65191i S:18376 M:256579966 (Ack:116630255)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (81157) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (81167) chip[EM]: <<< [E:65191i S:18376 M:116630258 (Ack:256579966)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (81187) chip[EM]: >>> [E:65192i S:18376 M:256579967 (Ack:116630256)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (81197) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (81207) chip[EM]: <<< [E:65192i S:18376 M:116630259 (Ack:256579967)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (81227) chip[EM]: >>> [E:63940r S:18376 M:256579968 (Ack:116630257)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (81247) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (81247) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (81257) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (81267) chip[EM]: <<< [E:63940r S:18376 M:116630260 (Ack:256579968)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (81287) chip[EM]: ??1 [E:63940r S:18376 M:116630260] (S) Msg Retransmission to 1:0000000000000001 scheduled for 404ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81307) chip[EM]: >>> [E:63940r S:18376 M:256579969 (Ack:116630260)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (81317) chip[EM]: >>> [E:63941r S:18376 M:256579970] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (81337) chip[EM]: <<< [E:63941r S:18376 M:116630261 (Ack:256579970)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (81347) chip[EM]: ??1 [E:63941r S:18376 M:116630261] (S) Msg Retransmission to 1:0000000000000001 scheduled for 349ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81367) chip[EM]: >>> [E:63941r S:18376 M:256579971 (Ack:116630261)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (81387) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (81387) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (81397) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (81407) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (81417) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (81427) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (81437) app_driver: Socket command received: ON[0m
+[0;32mI (81457) chip[EM]: <<< [E:63941r S:18376 M:116630262 (Ack:256579971)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (81467) chip[EM]: ??1 [E:63941r S:18376 M:116630262] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81487) chip[EM]: >>> [E:63941r S:18376 M:256579972 (Ack:116630262)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (81497) chip[EM]: >>> [E:63942r S:18376 M:256579973] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (81507) chip[EM]: <<< [E:63942r S:18376 M:116630263 (Ack:256579973)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (81527) chip[EM]: ??1 [E:63942r S:18376 M:116630263] (S) Msg Retransmission to 1:0000000000000001 scheduled for 347ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81547) chip[EM]: >>> [E:63942r S:18376 M:256579974 (Ack:116630263)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (81557) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (81567) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (81577) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (81587) chip[EM]: <<< [E:63942r S:18376 M:116630264 (Ack:256579974)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (81607) chip[EM]: ??1 [E:63942r S:18376 M:116630264] (S) Msg Retransmission to 1:0000000000000001 scheduled for 402ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (81627) chip[EM]: >>> [E:63942r S:18376 M:256579975 (Ack:116630264)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (82027) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (82027) chip[EM]: <<< [E:65193i S:18376 M:116630265] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (82047) chip[EM]: ??1 [E:65193i S:18376 M:116630265] (S) Msg Retransmission to 1:0000000000000001 scheduled for 391ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (82067) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (82067) chip[EM]: <<< [E:65194i S:18376 M:116630266] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (82087) chip[EM]: ??1 [E:65194i S:18376 M:116630266] (S) Msg Retransmission to 1:0000000000000001 scheduled for 380ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (82077) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (82107) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (82117) chip[EM]: >>> [E:65193i S:18376 M:256579976 (Ack:116630265)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (82127) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (82137) chip[EM]: <<< [E:65193i S:18376 M:116630267 (Ack:256579976)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (82157) chip[EM]: >>> [E:65194i S:18376 M:256579977 (Ack:116630266)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (82167) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (82177) chip[EM]: <<< [E:65194i S:18376 M:116630268 (Ack:256579977)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (83107) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (83107) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (84107) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (84107) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (85107) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (85107) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (85347) chip[EM]: >>> [E:63943r S:18376 M:256579978] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (85347) chip[EM]: <<< [E:63943r S:18376 M:116630269 (Ack:256579978)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (85367) chip[EM]: ??1 [E:63943r S:18376 M:116630269] (S) Msg Retransmission to 1:0000000000000001 scheduled for 374ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85387) chip[EM]: >>> [E:63943r S:18376 M:256579979 (Ack:116630269)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (85397) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (85407) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (85417) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (85417) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (85437) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85447) app_driver: Socket command received: OFF[0m
+[0;32mI (85457) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (85457) chip[EM]: <<< [E:63943r S:18376 M:116630270 (Ack:256579979)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (85477) chip[EM]: ??1 [E:63943r S:18376 M:116630270] (S) Msg Retransmission to 1:0000000000000001 scheduled for 371ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85497) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85507) chip[EM]: <<< [E:65195i S:18376 M:116630271] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (85527) chip[EM]: ??1 [E:65195i S:18376 M:116630271] (S) Msg Retransmission to 1:0000000000000001 scheduled for 375ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85537) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85547) chip[EM]: <<< [E:65196i S:18376 M:116630272] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (85567) chip[EM]: ??1 [E:65196i S:18376 M:116630272] (S) Msg Retransmission to 1:0000000000000001 scheduled for 365ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85577) chip[EM]: >>> [E:63943r S:18376 M:256579980 (Ack:116630270)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (85597) chip[EM]: >>> [E:63944r S:18376 M:256579981] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (85607) chip[EM]: <<< [E:63944r S:18376 M:116630273 (Ack:256579981)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (85627) chip[EM]: ??1 [E:63944r S:18376 M:116630273] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85647) chip[EM]: >>> [E:65195i S:18376 M:256579982 (Ack:116630271)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (85657) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (85667) chip[EM]: <<< [E:65195i S:18376 M:116630274 (Ack:256579982)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (85687) chip[EM]: >>> [E:65196i S:18376 M:256579983 (Ack:116630272)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (85697) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (85707) chip[EM]: <<< [E:65196i S:18376 M:116630275 (Ack:256579983)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (85727) chip[EM]: >>> [E:63944r S:18376 M:256579984 (Ack:116630273)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (85737) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (85747) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85757) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (85767) chip[EM]: <<< [E:63944r S:18376 M:116630276 (Ack:256579984)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (85787) chip[EM]: ??1 [E:63944r S:18376 M:116630276] (S) Msg Retransmission to 1:0000000000000001 scheduled for 357ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85797) chip[EM]: >>> [E:63944r S:18376 M:256579985 (Ack:116630276)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (85817) chip[EM]: >>> [E:63945r S:18376 M:256579986] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (85827) chip[EM]: <<< [E:63945r S:18376 M:116630277 (Ack:256579986)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (85847) chip[EM]: ??1 [E:63945r S:18376 M:116630277] (S) Msg Retransmission to 1:0000000000000001 scheduled for 378ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85867) chip[EM]: >>> [E:63945r S:18376 M:256579987 (Ack:116630277)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (85877) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (85887) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85897) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (85907) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (85917) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (85927) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (85937) app_driver: Socket command received: ON[0m
+[0;32mI (85947) chip[EM]: <<< [E:63945r S:18376 M:116630278 (Ack:256579987)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (85957) chip[EM]: ??1 [E:63945r S:18376 M:116630278] (S) Msg Retransmission to 1:0000000000000001 scheduled for 348ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (85977) chip[EM]: >>> [E:63945r S:18376 M:256579988 (Ack:116630278)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (85997) chip[EM]: >>> [E:63946r S:18376 M:256579989] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (86007) chip[EM]: <<< [E:63946r S:18376 M:116630279 (Ack:256579989)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86027) chip[EM]: ??1 [E:63946r S:18376 M:116630279] (S) Msg Retransmission to 1:0000000000000001 scheduled for 339ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86037) chip[EM]: >>> [E:63946r S:18376 M:256579990 (Ack:116630279)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (86057) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (86067) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (86077) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (86077) chip[EM]: <<< [E:63946r S:18376 M:116630280 (Ack:256579990)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (86097) chip[EM]: ??1 [E:63946r S:18376 M:116630280] (S) Msg Retransmission to 1:0000000000000001 scheduled for 355ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86117) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (86117) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (86147) chip[EM]: >>> [E:63946r S:18376 M:256579991 (Ack:116630280)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (86367) chip[EM]: >>> [E:63947r S:18376 M:256579992] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (86367) chip[EM]: <<< [E:63947r S:18376 M:116630281 (Ack:256579992)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86387) chip[EM]: ??1 [E:63947r S:18376 M:116630281] (S) Msg Retransmission to 1:0000000000000001 scheduled for 368ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86397) chip[EM]: >>> [E:63947r S:18376 M:256579993 (Ack:116630281)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (86417) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (86427) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (86437) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (86437) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (86447) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86467) app_driver: Socket command received: OFF[0m
+[0;32mI (86477) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (86477) chip[EM]: <<< [E:63947r S:18376 M:116630282 (Ack:256579993)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (86497) chip[EM]: ??1 [E:63947r S:18376 M:116630282] (S) Msg Retransmission to 1:0000000000000001 scheduled for 401ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86517) chip[EM]: >>> [E:63947r S:18376 M:256579994 (Ack:116630282)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (86527) chip[EM]: >>> [E:63948r S:18376 M:256579995] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (86547) chip[EM]: <<< [E:63948r S:18376 M:116630283 (Ack:256579995)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86567) chip[EM]: ??1 [E:63948r S:18376 M:116630283] (S) Msg Retransmission to 1:0000000000000001 scheduled for 386ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86577) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86587) chip[EM]: <<< [E:65197i S:18376 M:116630284] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (86607) chip[EM]: ??1 [E:65197i S:18376 M:116630284] (S) Msg Retransmission to 1:0000000000000001 scheduled for 393ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86617) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86627) chip[EM]: <<< [E:65198i S:18376 M:116630285] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (86647) chip[EM]: ??1 [E:65198i S:18376 M:116630285] (S) Msg Retransmission to 1:0000000000000001 scheduled for 349ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86667) chip[EM]: >>> [E:63948r S:18376 M:256579996 (Ack:116630283)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (86677) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (86687) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86697) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (86707) chip[EM]: <<< [E:63948r S:18376 M:116630286 (Ack:256579996)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (86727) chip[EM]: ??1 [E:63948r S:18376 M:116630286] (S) Msg Retransmission to 1:0000000000000001 scheduled for 338ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86737) chip[EM]: >>> [E:65197i S:18376 M:256579997 (Ack:116630284)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86757) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (86757) chip[EM]: <<< [E:65197i S:18376 M:116630287 (Ack:256579997)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (86777) chip[EM]: >>> [E:65198i S:18376 M:256579998 (Ack:116630285)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86797) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (86797) chip[EM]: <<< [E:65198i S:18376 M:116630288 (Ack:256579998)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (86817) chip[EM]: >>> [E:63948r S:18376 M:256579999 (Ack:116630286)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (86837) chip[EM]: >>> [E:63949r S:18376 M:256580000] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (86847) chip[EM]: <<< [E:63949r S:18376 M:116630289 (Ack:256580000)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (86867) chip[EM]: ??1 [E:63949r S:18376 M:116630289] (S) Msg Retransmission to 1:0000000000000001 scheduled for 384ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86897) chip[EM]: >>> [E:63949r S:18376 M:256580001 (Ack:116630289)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (86897) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (86907) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86917) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (86927) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (86937) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (86947) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (86957) app_driver: Socket command received: ON[0m
+[0;32mI (86967) chip[EM]: <<< [E:63949r S:18376 M:116630290 (Ack:256580001)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (86977) chip[EM]: ??1 [E:63949r S:18376 M:116630290] (S) Msg Retransmission to 1:0000000000000001 scheduled for 404ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (86997) chip[EM]: >>> [E:63949r S:18376 M:256580002 (Ack:116630290)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (87007) chip[EM]: >>> [E:63950r S:18376 M:256580003] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (87027) chip[EM]: <<< [E:63950r S:18376 M:116630291 (Ack:256580003)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (87047) chip[EM]: ??1 [E:63950r S:18376 M:116630291] (S) Msg Retransmission to 1:0000000000000001 scheduled for 395ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87127) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (87127) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (87127) chip[EM]: >>> [E:63950r S:18376 M:256580004 (Ack:116630291)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (87137) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (87147) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (87157) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (87167) chip[EM]: <<< [E:63950r S:18376 M:116630292 (Ack:256580004)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (87187) chip[EM]: ??1 [E:63950r S:18376 M:116630292] (S) Msg Retransmission to 1:0000000000000001 scheduled for 367ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87207) chip[EM]: >>> [E:63950r S:18376 M:256580005 (Ack:116630292)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (87587) chip[EM]: >>> [E:63951r S:18376 M:256580006] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (87597) chip[EM]: <<< [E:63951r S:18376 M:116630293 (Ack:256580006)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (87617) chip[EM]: ??1 [E:63951r S:18376 M:116630293] (S) Msg Retransmission to 1:0000000000000001 scheduled for 401ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87627) chip[EM]: >>> [E:63951r S:18376 M:256580007 (Ack:116630293)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (87647) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (87657) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (87667) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (87667) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (87677) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (87687) app_driver: Socket command received: OFF[0m
+[0;32mI (87707) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (87707) chip[EM]: <<< [E:63951r S:18376 M:116630294 (Ack:256580007)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (87727) chip[EM]: ??1 [E:63951r S:18376 M:116630294] (S) Msg Retransmission to 1:0000000000000001 scheduled for 334ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87737) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (87757) chip[EM]: <<< [E:65199i S:18376 M:116630295] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (87767) chip[EM]: ??1 [E:65199i S:18376 M:116630295] (S) Msg Retransmission to 1:0000000000000001 scheduled for 376ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87787) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (87797) chip[EM]: <<< [E:65200i S:18376 M:116630296] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (87817) chip[EM]: ??1 [E:65200i S:18376 M:116630296] (S) Msg Retransmission to 1:0000000000000001 scheduled for 403ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87827) chip[EM]: >>> [E:63951r S:18376 M:256580008 (Ack:116630294)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (87847) chip[EM]: >>> [E:63952r S:18376 M:256580009] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (87857) chip[EM]: <<< [E:63952r S:18376 M:116630297 (Ack:256580009)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (87877) chip[EM]: ??1 [E:63952r S:18376 M:116630297] (S) Msg Retransmission to 1:0000000000000001 scheduled for 350ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (87887) chip[EM]: >>> [E:65199i S:18376 M:256580010 (Ack:116630295)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (87907) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (87907) chip[EM]: <<< [E:65199i S:18376 M:116630298 (Ack:256580010)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (87937) chip[EM]: >>> [E:65200i S:18376 M:256580011 (Ack:116630296)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (87947) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (87957) chip[EM]: <<< [E:65200i S:18376 M:116630299 (Ack:256580011)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (87977) chip[EM]: >>> [E:63952r S:18376 M:256580012 (Ack:116630297)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (87987) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (87997) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (88007) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (88017) chip[EM]: <<< [E:63952r S:18376 M:116630300 (Ack:256580012)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (88037) chip[EM]: ??1 [E:63952r S:18376 M:116630300] (S) Msg Retransmission to 1:0000000000000001 scheduled for 370ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88127) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (88127) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (88377) chip[EM]: >>> [E:63953r S:18376 M:256580014] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (88387) chip[EM]: <<< [E:63953r S:18376 M:116630301 (Ack:256580014)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (88407) chip[EM]: ??1 [E:63953r S:18376 M:116630301] (S) Msg Retransmission to 1:0000000000000001 scheduled for 363ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88417) chip[EM]: <<1 [E:63952r S:18376 M:116630300] (S) Msg Retransmission to 1:0000000000000001[0m
+[0;32mI (88427) chip[EM]: ??2 [E:63952r S:18376 M:116630300] (S) Msg Retransmission to 1:0000000000000001 scheduled for 395ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88447) chip[EM]: >>> [E:63953r S:18376 M:256580015 (Ack:116630301)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (88457) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (88467) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (88477) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (88477) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (88487) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (88507) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (88517) app_driver: Socket command received: ON[0m
+[0;32mI (88527) chip[EM]: <<< [E:63953r S:18376 M:116630302 (Ack:256580015)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (88537) chip[EM]: ??1 [E:63953r S:18376 M:116630302] (S) Msg Retransmission to 1:0000000000000001 scheduled for 381ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88557) chip[EM]: >>> [E:63952r S:18376 M:256580016 (Ack:116630300)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (88567) chip[EM]: >>> [E:63953r S:18376 M:256580017 (Ack:116630302)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (88587) chip[EM]: >>> [E:63954r S:18376 M:256580018] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (88597) chip[EM]: <<< [E:63954r S:18376 M:116630303 (Ack:256580018)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (88617) chip[EM]: ??1 [E:63954r S:18376 M:116630303] (S) Msg Retransmission to 1:0000000000000001 scheduled for 402ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88787) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (88787) chip[EM]: <<< [E:65201i S:18376 M:116630304] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (88807) chip[EM]: ??1 [E:65201i S:18376 M:116630304] (S) Msg Retransmission to 1:0000000000000001 scheduled for 334ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88817) chip[EM]: >>> [E:63954r S:18376 M:256580019 (Ack:116630303)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (88837) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (88837) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (88847) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (88857) chip[EM]: <<< [E:63954r S:18376 M:116630305 (Ack:256580019)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (88877) chip[EM]: ??1 [E:63954r S:18376 M:116630305] (S) Msg Retransmission to 1:0000000000000001 scheduled for 399ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88897) chip[EM]: >>> [E:65201i S:18376 M:256580020 (Ack:116630304)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (88907) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (88917) chip[EM]: <<< [E:65201i S:18376 M:116630306 (Ack:256580020)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (88937) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (88947) chip[EM]: <<< [E:65202i S:18376 M:116630307] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (88957) chip[EM]: ??1 [E:65202i S:18376 M:116630307] (S) Msg Retransmission to 1:0000000000000001 scheduled for 354ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (88977) chip[EM]: >>> [E:63954r S:18376 M:256580021 (Ack:116630305)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (88987) chip[EM]: >>> [E:63955r S:18376 M:256580022] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (89007) chip[EM]: <<< [E:63955r S:18376 M:116630308 (Ack:256580022)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89027) chip[EM]: ??1 [E:63955r S:18376 M:116630308] (S) Msg Retransmission to 1:0000000000000001 scheduled for 361ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89037) chip[EM]: >>> [E:65202i S:18376 M:256580023 (Ack:116630307)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89057) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (89057) chip[EM]: <<< [E:65202i S:18376 M:116630309 (Ack:256580023)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89107) chip[EM]: >>> [E:63955r S:18376 M:256580024 (Ack:116630308)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (89107) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (89117) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89127) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (89137) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89147) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (89157) app_driver: Socket command received: OFF[0m
+[0;32mI (89127) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (89167) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (89167) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (89187) chip[EM]: <<< [E:63955r S:18376 M:116630310 (Ack:256580024)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (89207) chip[EM]: ??1 [E:63955r S:18376 M:116630310] (S) Msg Retransmission to 1:0000000000000001 scheduled for 331ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89217) chip[EM]: >>> [E:63955r S:18376 M:256580025 (Ack:116630310)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89237) chip[EM]: >>> [E:63956r S:18376 M:256580026] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (89247) chip[EM]: <<< [E:63956r S:18376 M:116630311 (Ack:256580026)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89267) chip[EM]: ??1 [E:63956r S:18376 M:116630311] (S) Msg Retransmission to 1:0000000000000001 scheduled for 378ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89287) chip[EM]: >>> [E:63956r S:18376 M:256580027 (Ack:116630311)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (89297) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (89307) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (89317) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (89327) chip[EM]: <<< [E:63956r S:18376 M:116630312 (Ack:256580027)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (89337) chip[EM]: ??1 [E:63956r S:18376 M:116630312] (S) Msg Retransmission to 1:0000000000000001 scheduled for 336ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89357) chip[EM]: >>> [E:63956r S:18376 M:256580028 (Ack:116630312)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89367) chip[EM]: >>> [E:63957r S:18376 M:256580029] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (89387) chip[EM]: <<< [E:63957r S:18376 M:116630313 (Ack:256580029)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89407) chip[EM]: ??1 [E:63957r S:18376 M:116630313] (S) Msg Retransmission to 1:0000000000000001 scheduled for 375ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89427) chip[EM]: >>> [E:63957r S:18376 M:256580030 (Ack:116630313)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (89437) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (89447) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (89457) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (89457) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (89467) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (89477) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89497) app_driver: Socket command received: ON[0m
+[0;32mI (89507) chip[EM]: <<< [E:63957r S:18376 M:116630314 (Ack:256580030)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (89517) chip[EM]: ??1 [E:63957r S:18376 M:116630314] (S) Msg Retransmission to 1:0000000000000001 scheduled for 342ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89547) chip[EM]: >>> [E:63957r S:18376 M:256580031 (Ack:116630314)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89547) chip[EM]: >>> [E:63958r S:18376 M:256580032] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (89567) chip[EM]: <<< [E:63958r S:18376 M:116630315 (Ack:256580032)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89587) chip[EM]: ??1 [E:63958r S:18376 M:116630315] (S) Msg Retransmission to 1:0000000000000001 scheduled for 357ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89597) chip[EM]: >>> [E:63958r S:18376 M:256580033 (Ack:116630315)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (89617) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (89617) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89627) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (89637) chip[EM]: <<< [E:63958r S:18376 M:116630316 (Ack:256580033)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (89657) chip[EM]: ??1 [E:63958r S:18376 M:116630316] (S) Msg Retransmission to 1:0000000000000001 scheduled for 335ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89677) chip[EM]: >>> [E:63958r S:18376 M:256580034 (Ack:116630316)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89817) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89817) chip[EM]: <<< [E:65203i S:18376 M:116630317] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (89837) chip[EM]: ??1 [E:65203i S:18376 M:116630317] (S) Msg Retransmission to 1:0000000000000001 scheduled for 398ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89857) chip[EM]: >>> [E:65203i S:18376 M:256580035 (Ack:116630317)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89867) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (89867) chip[EM]: <<< [E:65203i S:18376 M:116630318 (Ack:256580035)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (89887) chip[EM]: >>> [E:63959r S:18376 M:256580036] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (89907) chip[EM]: <<< [E:63959r S:18376 M:116630319 (Ack:256580036)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (89927) chip[EM]: ??1 [E:63959r S:18376 M:116630319] (S) Msg Retransmission to 1:0000000000000001 scheduled for 406ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (89967) chip[EM]: >>> [E:63959r S:18376 M:256580037 (Ack:116630319)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (89977) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (89977) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (89987) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (89997) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (90007) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (90017) app_driver: Socket command received: OFF[0m
+[0;32mI (90037) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (90037) chip[EM]: <<< [E:63959r S:18376 M:116630320 (Ack:256580037)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (90057) chip[EM]: ??1 [E:63959r S:18376 M:116630320] (S) Msg Retransmission to 1:0000000000000001 scheduled for 369ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (90067) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (90077) chip[EM]: <<< [E:65204i S:18376 M:116630321] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (90097) chip[EM]: ??1 [E:65204i S:18376 M:116630321] (S) Msg Retransmission to 1:0000000000000001 scheduled for 339ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (90107) chip[EM]: >>> [E:63959r S:18376 M:256580038 (Ack:116630320)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (90127) chip[EM]: >>> [E:63960r S:18376 M:256580039] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (90147) chip[EM]: <<< [E:63960r S:18376 M:116630322 (Ack:256580039)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (90157) chip[EM]: ??1 [E:63960r S:18376 M:116630322] (S) Msg Retransmission to 1:0000000000000001 scheduled for 365ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (90177) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (90177) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (90187) chip[EM]: >>> [E:65204i S:18376 M:256580040 (Ack:116630321)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (90197) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (90207) chip[EM]: <<< [E:65204i S:18376 M:116630323 (Ack:256580040)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (90227) chip[EM]: >>> [E:63960r S:18376 M:256580041 (Ack:116630322)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (90247) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (90247) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (90267) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (90267) chip[EM]: <<< [E:63960r S:18376 M:116630324 (Ack:256580041)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (90287) chip[EM]: ??1 [E:63960r S:18376 M:116630324] (S) Msg Retransmission to 1:0000000000000001 scheduled for 395ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (90337) chip[EM]: >>> [E:63960r S:18376 M:256580042 (Ack:116630324)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (90847) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (90857) chip[EM]: <<< [E:65205i S:18376 M:116630325] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (90867) chip[EM]: ??1 [E:65205i S:18376 M:116630325] (S) Msg Retransmission to 1:0000000000000001 scheduled for 344ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (90897) chip[EM]: >>> [E:65205i S:18376 M:256580043 (Ack:116630325)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (90897) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (90907) chip[EM]: <<< [E:65205i S:18376 M:116630326 (Ack:256580043)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (91187) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (91187) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (92187) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (92187) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (93117) chip[EM]: >>> [E:63961r S:18376 M:256580044] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (93127) chip[EM]: <<< [E:63961r S:18376 M:116630327 (Ack:256580044)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (93147) chip[EM]: ??1 [E:63961r S:18376 M:116630327] (S) Msg Retransmission to 1:0000000000000001 scheduled for 359ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93167) chip[EM]: >>> [E:63961r S:18376 M:256580045 (Ack:116630327)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (93177) esp_matter_command: Received command 0x00000001 for endpoint 0x0001's cluster 0x00000006[0m
+[0;32mI (93187) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (93197) chip[ZCL]: Toggle ep1 on/off from state 0 to 1[0m
+[0;32mI (93197) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (93207) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (93217) esp_matter_attribute: ********** W : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (93227) app_main: Floor heating ON, target temp restored to 45.00 C[0m
+[0;32mI (93187) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (93247) temp_ctrl: T=14.75 C -> power=100.0% (target=45.0 C)[0m
+[0;32mI (93247) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (93267) chip[EM]: <<< [E:63961r S:18376 M:116630328 (Ack:256580045)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (93277) chip[EM]: ??1 [E:63961r S:18376 M:116630328] (S) Msg Retransmission to 1:0000000000000001 scheduled for 332ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93297) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (93307) chip[EM]: <<< [E:65206i S:18376 M:116630329] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (93327) chip[EM]: ??1 [E:65206i S:18376 M:116630329] (S) Msg Retransmission to 1:0000000000000001 scheduled for 363ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93337) chip[EM]: >>> [E:63962r S:18376 M:256580047] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (93357) chip[EM]: <<< [E:63962r S:18376 M:116630330 (Ack:256580047)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (93367) chip[EM]: ??1 [E:63962r S:18376 M:116630330] (S) Msg Retransmission to 1:0000000000000001 scheduled for 380ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93387) chip[EM]: >>> [E:65206i S:18376 M:256580048 (Ack:116630329)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (93397) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (93407) chip[EM]: <<< [E:65206i S:18376 M:116630331 (Ack:256580048)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (93427) chip[EM]: >>> [E:63962r S:18376 M:256580049 (Ack:116630330)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (93447) esp_matter_command: Received command 0x00000001 for endpoint 0x0001's cluster 0x00000006[0m
+[0;32mI (93447) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (93457) chip[ZCL]: Endpoint 1 On/off already set to new value[0m
+[0;32mI (93467) chip[EM]: <<< [E:63962r S:18376 M:116630332 (Ack:256580049)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (93487) chip[EM]: ??1 [E:63962r S:18376 M:116630332] (S) Msg Retransmission to 1:0000000000000001 scheduled for 381ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93547) chip[EM]: >>> [E:63962r S:18376 M:256580050 (Ack:116630332)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (93617) chip[EM]: <<1 [E:63961r S:18376 M:116630328] (S) Msg Retransmission to 1:0000000000000001[0m
+[0;32mI (93617) chip[EM]: ??2 [E:63961r S:18376 M:116630328] (S) Msg Retransmission to 1:0000000000000001 scheduled for 348ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (93667) chip[EM]: >>> [E:63961r S:18376 M:256580051 (Ack:116630328)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (94247) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (94247) temp_ctrl: T=14.75 C -> power=100.0% (target=45.0 C)[0m
+[0;32mI (94467) chip[EM]: >>> [E:63963r S:18376 M:256580052] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (94477) chip[EM]: <<< [E:63963r S:18376 M:116630333 (Ack:256580052)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (94497) chip[EM]: ??1 [E:63963r S:18376 M:116630333] (S) Msg Retransmission to 1:0000000000000001 scheduled for 406ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (94527) chip[EM]: >>> [E:63963r S:18376 M:256580053 (Ack:116630333)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (94527) esp_matter_command: Received command 0x00000000 for endpoint 0x0001's cluster 0x00000006[0m
+[0;32mI (94537) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (94547) chip[ZCL]: Toggle ep1 on/off from state 1 to 0[0m
+[0;32mI (94557) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (94567) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (94577) esp_matter_attribute: ********** W : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (94587) app_main: Floor heating OFF[0m
+[0;32mI (94597) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (94597) chip[EM]: <<< [E:63963r S:18376 M:116630334 (Ack:256580053)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (94617) chip[EM]: ??1 [E:63963r S:18376 M:116630334] (S) Msg Retransmission to 1:0000000000000001 scheduled for 403ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (94637) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (94647) chip[EM]: <<< [E:65207i S:18376 M:116630335] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (94667) chip[EM]: ??1 [E:65207i S:18376 M:116630335] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (94697) chip[EM]: >>> [E:63963r S:18376 M:256580054 (Ack:116630334)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (94697) chip[EM]: >>> [E:63964r S:18376 M:256580055] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (94717) chip[EM]: <<< [E:63964r S:18376 M:116630336 (Ack:256580055)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (94737) chip[EM]: ??1 [E:63964r S:18376 M:116630336] (S) Msg Retransmission to 1:0000000000000001 scheduled for 349ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (94747) chip[EM]: >>> [E:65207i S:18376 M:256580056 (Ack:116630335)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (94767) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (94767) chip[EM]: <<< [E:65207i S:18376 M:116630337 (Ack:256580056)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (94787) chip[EM]: >>> [E:63964r S:18376 M:256580057 (Ack:116630336)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (94807) esp_matter_command: Received command 0x00000000 for endpoint 0x0001's cluster 0x00000006[0m
+[0;32mI (94817) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (94827) chip[ZCL]: Endpoint 1 On/off already set to new value[0m
+[0;32mI (94827) chip[EM]: <<< [E:63964r S:18376 M:116630338 (Ack:256580057)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (94847) chip[EM]: ??1 [E:63964r S:18376 M:116630338] (S) Msg Retransmission to 1:0000000000000001 scheduled for 346ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (94867) chip[EM]: >>> [E:63964r S:18376 M:256580058 (Ack:116630338)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (95247) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (95247) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (96247) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (96247) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (97217) chip[EM]: >>> [E:63965r S:18376 M:256580059] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (97227) chip[EM]: <<< [E:63965r S:18376 M:116630339 (Ack:256580059)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (97237) chip[EM]: ??1 [E:63965r S:18376 M:116630339] (S) Msg Retransmission to 1:0000000000000001 scheduled for 359ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (97257) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (97257) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (97267) chip[EM]: >>> [E:63965r S:18376 M:256580060 (Ack:116630339)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (97287) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (97287) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (97307) chip[ZCL]: Toggle ep2 on/off from state 0 to 1[0m
+[0;32mI (97307) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (97317) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (97327) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (97337) app_driver: Socket command received: ON[0m
+[0;32mI (97357) chip[EM]: <<< [E:63965r S:18376 M:116630340 (Ack:256580060)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (97367) chip[EM]: ??1 [E:63965r S:18376 M:116630340] (S) Msg Retransmission to 1:0000000000000001 scheduled for 410ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (97377) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (97387) chip[EM]: <<< [E:65208i S:18376 M:116630341] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (97407) chip[EM]: ??1 [E:65208i S:18376 M:116630341] (S) Msg Retransmission to 1:0000000000000001 scheduled for 408ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (97427) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (97437) chip[EM]: <<< [E:65209i S:18376 M:116630342] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (97447) chip[EM]: ??1 [E:65209i S:18376 M:116630342] (S) Msg Retransmission to 1:0000000000000001 scheduled for 350ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (97467) chip[EM]: >>> [E:63965r S:18376 M:256580061 (Ack:116630340)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (97477) chip[EM]: >>> [E:63966r S:18376 M:256580062] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (97497) chip[EM]: <<< [E:63966r S:18376 M:116630343 (Ack:256580062)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (97517) chip[EM]: ??1 [E:63966r S:18376 M:116630343] (S) Msg Retransmission to 1:0000000000000001 scheduled for 334ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (97527) chip[EM]: >>> [E:65208i S:18376 M:256580063 (Ack:116630341)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (97547) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (97547) chip[EM]: <<< [E:65208i S:18376 M:116630344 (Ack:256580063)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (97567) chip[EM]: >>> [E:65209i S:18376 M:256580064 (Ack:116630342)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (97587) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (97587) chip[EM]: <<< [E:65209i S:18376 M:116630345 (Ack:256580064)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (97617) chip[EM]: >>> [E:63966r S:18376 M:256580065 (Ack:116630343)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (97627) esp_matter_command: Received command 0x00000001 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (97637) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (97647) chip[ZCL]: Endpoint 2 On/off already set to new value[0m
+[0;32mI (97657) chip[EM]: <<< [E:63966r S:18376 M:116630346 (Ack:256580065)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (97677) chip[EM]: ??1 [E:63966r S:18376 M:116630346] (S) Msg Retransmission to 1:0000000000000001 scheduled for 383ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (98037) chip[EM]: >>> [E:63966r S:18376 M:256580066 (Ack:116630346)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (98267) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (98267) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (99267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (99267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (100267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (100267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (101267) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (101267) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (102267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (102267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (103267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (103267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (104267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (104267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (105267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (105267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (106267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (106267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (107267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (107267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (108267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (108267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (109267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (109267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (110267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (110267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (110797) chip[EM]: <<< [E:65210i S:18376 M:116630347] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0001:05 (IM:ReportData) (B:41)[0m
+[0;32mI (110807) chip[EM]: ??1 [E:65210i S:18376 M:116630347] (S) Msg Retransmission to 1:0000000000000001 scheduled for 563ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (110837) chip[EM]: >>> [E:65210i S:18376 M:256580067 (Ack:116630347)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (110847) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (110847) chip[EM]: <<< [E:65210i S:18376 M:116630348 (Ack:256580067)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:[FE80::3E0B:4FFF:FE15:3DE6%st1]:44539] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (111267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (111267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (112267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (112267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (113267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (113267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (114267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (114267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (115267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (115267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (116267) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (116267) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (117267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (117267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (118267) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (118267) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (119267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (119267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (120267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (120267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (121267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (121267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (122267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (122267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (123267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (123267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (124267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (124267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (125267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (125267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (126267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (126267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (127267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (127267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (128267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (128267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (129267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (129267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (130267) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (130267) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (131267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (131267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (132267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (132267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (133267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (133267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (134267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (134267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (135267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (135267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (136267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (136267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (137267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (137267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (138267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (138267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (139267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (139267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (140267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (140267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (141267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (141267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (142267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (142267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (143267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (143267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (144267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (144267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (145267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (145267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (146267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (146267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (147267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (147267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (148267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (148267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (149267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (149267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (150267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (150267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (151267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (151267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (152267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (152267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (153267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (153267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (154267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (154267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (155267) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (155267) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (156267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (156267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (157267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (157267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (158267) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (158267) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (159267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (159267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (160267) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (160267) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (13912) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 I (14962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (14962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (15962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (15962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (16962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (16962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (17962) temp_sensor: Raw: 2896, Voltage: 2.862 V, Temp: 13.05 °C[0m
+[0;32mI (17962) temp_ctrl: T=13.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (18962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (18962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (19962) temp_sensor: Raw: 2897, Voltage: 2.863 V, Temp: 13.15 °C[0m
+[0;32mI (19962) temp_ctrl: T=13.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (20962) temp_sensor: Raw: 2896, Voltage: 2.862 V, Temp: 13.05 °C[0m
+[0;32mI (20962) temp_ctrl: T=13.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (21962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (21962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (22962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (22962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (23962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (23962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (24962) temp_sensor: Raw: 2896, Voltage: 2.862 V, Temp: 13.05 °C[0m
+[0;32mI (24962) temp_ctrl: T=13.05 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (25962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (25962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (26962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (26962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (27962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (27962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (28962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (28962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (29962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (29962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (30962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (30962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (31962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (31962) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (32962) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (32962) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (33722) chip[IM]: Skip resuming live subscriptionId 3990524454[0m
+[0;32mI (33722) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33732) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x000000000000F6EB and system Timestamp 0x0000000000016C1B.[0m
+[0;32mI (33762) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33762) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x00000000000085C3 and system Timestamp 0x000000000037705B.[0m
+[0;32mI (33872) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33872) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008631 and system Timestamp 0x00000000003770C9.[0m
+[0;32mI (33902) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33902) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008655 and system Timestamp 0x00000000003770ED.[0m
+[0;32mI (33942) chip[IM]: Skip resuming live subscriptionId 180507860[0m
+[0;32mI (33942) chip[IM]: Skip resuming live subscriptionId 1756259392[0m
+[0;32mI (33942) chip[IM]: Skip resuming live subscriptionId 3671178194[0m
+[0;32mI (33942) chip[IM]: Skip resuming live subscriptionId 2922189971[0m
+[0;32mI (33952) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (33952) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x0000000000008688 and system Timestamp 0x0000000000377120.[0m
+[0;32mI (33962) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (33972) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (34002) chip[DIS]: Found an existing secure session to [1:0000000000000001]![0m
+[0;32mI (34002) chip[DMG]: Registered a ReadHandler that will schedule a report between system Timestamp: 0x00000000000086B9 and system Timestamp 0x0000000000377151.[0m
+[0;32mI (34042) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (34052) chip[EM]: <<< [E:26093i S:61756 M:259415223] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:70)[0m
+[0;32mI (34062) chip[EM]: ??1 [E:26093i S:61756 M:259415223] (S) Msg Retransmission to 1:0000000000000001 scheduled for 611ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34072) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (34092) chip[EM]: <<< [E:26094i S:61756 M:259415224] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34102) chip[EM]: ??1 [E:26094i S:61756 M:259415224] (S) Msg Retransmission to 1:0000000000000001 scheduled for 649ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34122) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (34132) chip[EM]: <<< [E:26095i S:61756 M:259415225] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34142) chip[EM]: ??1 [E:26095i S:61756 M:259415225] (S) Msg Retransmission to 1:0000000000000001 scheduled for 603ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34162) chip[EM]: <<< [E:26096i S:61756 M:259415226] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (34172) chip[EM]: ??1 [E:26096i S:61756 M:259415226] (S) Msg Retransmission to 1:0000000000000001 scheduled for 630ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (34192) chip[EM]: >>> [E:26093i S:61756 M:30687022 (Ack:259415223)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34202) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34212) chip[EM]: <<< [E:26093i S:61756 M:259415227 (Ack:30687022)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34232) chip[EM]: >>> [E:26094i S:61756 M:30687023 (Ack:259415224)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34242) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34252) chip[EM]: <<< [E:26094i S:61756 M:259415228 (Ack:30687023)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34272) chip[EM]: >>> [E:26095i S:61756 M:30687024 (Ack:259415225)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34282) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34292) chip[EM]: <<< [E:26095i S:61756 M:259415229 (Ack:30687024)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34302) chip[EM]: >>> [E:26096i S:61756 M:30687025 (Ack:259415226)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34322) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (34322) chip[EM]: <<< [E:26096i S:61756 M:259415230 (Ack:30687025)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34762) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000008's Attribute 0x00000000 is 254 **********[0m
+[0;32mI (34762) chip[EM]: <<< [E:26097i S:61756 M:259415231] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:70)[0m
+[0;32mI (34782) chip[EM]: ??1 [E:26097i S:61756 M:259415231] (S) Msg Retransmission to 1:0000000000000001 scheduled for 405ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34802) chip[EM]: >>> [E:26097i S:61756 M:30687026 (Ack:259415231)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34812) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (34822) chip[DMG]: Subscription id 0x59c8cb0a from node <0000000000000001, 1> torn down[0m
+[0;32mI (34832) chip[EM]: <<< [E:26097i S:61756 M:259415232 (Ack:30687026)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34872) esp_matter_attribute: ********** R : Endpoint 0x0001's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (34872) chip[EM]: <<< [E:26098i S:61756 M:259415233] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34892) chip[EM]: ??1 [E:26098i S:61756 M:259415233] (S) Msg Retransmission to 1:0000000000000001 scheduled for 377ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34902) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (34912) chip[EM]: <<< [E:26099i S:61756 M:259415234] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (34932) chip[EM]: ??1 [E:26099i S:61756 M:259415234] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (34942) chip[EM]: >>> [E:26098i S:61756 M:30687027 (Ack:259415233)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (34962) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (34972) chip[DMG]: Subscription id 0x1d7ede08 from node <0000000000000001, 1> torn down[0m
+[0;32mI (34982) chip[EM]: <<< [E:26098i S:61756 M:259415235 (Ack:30687027)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (34992) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (35002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (35002) chip[EM]: >>> [E:26099i S:61756 M:30687028 (Ack:259415234)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35022) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (35032) chip[DMG]: Subscription id 0xe4521c6 from node <0000000000000001, 1> torn down[0m
+[0;32mI (35042) chip[EM]: <<< [E:26099i S:61756 M:259415236 (Ack:30687028)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35052) chip[EM]: <<< [E:26100i S:61756 M:259415237] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:74)[0m
+[0;32mI (35072) chip[EM]: ??1 [E:26100i S:61756 M:259415237] (S) Msg Retransmission to 1:0000000000000001 scheduled for 343ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (35082) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (35092) chip[EM]: <<< [E:26101i S:61756 M:259415238] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (35112) chip[EM]: ??1 [E:26101i S:61756 M:259415238] (S) Msg Retransmission to 1:0000000000000001 scheduled for 349ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (35122) chip[EM]: >>> [E:26100i S:61756 M:30687029 (Ack:259415237)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35142) chip[IM]: Received status response, status is 0x7d[0m
+[0;32mI (35162) chip[DMG]: Subscription id 0x8308fadc from node <0000000000000001, 1> torn down[0m
+[0;32mI (35172) chip[EM]: <<< [E:26100i S:61756 M:259415239 (Ack:30687029)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (35182) chip[EM]: >>> [E:26101i S:61756 M:30687030 (Ack:259415238)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (35192) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (35202) chip[EM]: <<< [E:26101i S:61756 M:259415240 (Ack:30687030)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (36002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (36002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (37002) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (37002) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (38002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (38002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (39002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (39002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (40002) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (40002) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (41002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (41152) chip[EM]: <<< [E:26102i S:61756 M:259415241] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:71)[0m
+[0;32mI (41152) chip[EM]: ??1 [E:26102i S:61756 M:259415241] (S) Msg Retransmission to 1:0000000000000001 scheduled for 684ms from now [State:Idle II:500 AI:300 AT:4000][0m
+[0;32mI (41172) chip[EM]: >>> [E:26102i S:61756 M:30687031 (Ack:259415241)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (41182) chip[IM]: Received status response, status is 0x00[0m
+[0;32mI (41192) chip[EM]: <<< [E:26102i S:61756 M:259415242 (Ack:30687031)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (42002) temp_sensor: Raw: 2928, Voltage: 2.893 V, Temp: 16.15 °C[0m
+[0;32mI (42002) temp_ctrl: T=16.15 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (43002) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (43002) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (44002) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (44002) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (45002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (45002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (46002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (46002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (47002) temp_sensor: Raw: 2929, Voltage: 2.894 V, Temp: 16.25 °C[0m
+[0;32mI (47002) temp_ctrl: T=16.25 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (48002) temp_sensor: Raw: 2912, Voltage: 2.878 V, Temp: 14.65 °C[0m
+[0;32mI (48002) temp_ctrl: T=14.65 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (49002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (49002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (50002) temp_sensor: Raw: 2913, Voltage: 2.879 V, Temp: 14.75 °C[0m
+[0;32mI (50002) temp_ctrl: T=14.75 C -> power=0.0% (target=0.0 C)[0m
+[0;32mI (50672) chip[EM]: >>> [E:63980r S:61756 M:30687032] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (50672) chip[EM]: <<< [E:63980r S:61756 M:259415243 (Ack:30687032)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (50692) chip[EM]: ??1 [E:63980r S:61756 M:259415243] (S) Msg Retransmission to 1:0000000000000001 scheduled for 370ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (50712) chip[EM]: >>> [E:63980r S:61756 M:30687033 (Ack:259415243)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:08 (IM:InvokeCommandRequest) (B:63)[0m
+[0;32mI (50722) esp_matter_command: Received command 0x00000000 for endpoint 0x0002's cluster 0x00000006[0m
+[0;32mI (50732) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (50742) chip[ZCL]: Toggle ep2 on/off from state 1 to 0[0m
+[0;32mI (50742) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 1 **********[0m
+[0;32mI (50762) esp_matter_attribute: ********** W : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (50772) app_driver: Socket command received: OFF[0m
+[0;32mI (50782) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x0000FFFC is 0 **********[0m
+[0;32mI (50782) chip[EM]: <<< [E:63980r S:61756 M:259415244 (Ack:30687033)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:09 (IM:InvokeCommandResponse) (B:67)[0m
+[0;32mI (50802) chip[EM]: ??1 [E:63980r S:61756 M:259415244] (S) Msg Retransmission to 1:0000000000000001 scheduled for 396ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (50822) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (50832) chip[EM]: <<< [E:26103i S:61756 M:259415245] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (50842) chip[EM]: ??1 [E:26103i S:61756 M:259415245] (S) Msg Retransmission to 1:0000000000000001 scheduled for 396ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (50862) esp_matter_attribute: ********** R : Endpoint 0x0002's Cluster 0x00000006's Attribute 0x00000000 is 0 **********[0m
+[0;32mI (50872) chip[EM]: <<< [E:26104i S:61756 M:259415246] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:05 (IM:ReportData) (B:69)[0m
+[0;32mI (50882) chip[EM]: ??1 [E:26104i S:61756 M:259415246] (S) Msg Retransmission to 1:0000000000000001 scheduled for 376ms from now [State:Active II:500 AI:300 AT:4000][0m
+[0;32mI (50902) chip[EM]: >>> [E:63980r S:61756 M:30687034 (Ack:259415244)] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0000:10 (SecureChannel:StandaloneAck) (B:34)[0m
+[0;32mI (50912) chip[EM]: >>> [E:63981r S:61756 M:30687035] (S) Msg RX from 1:0000000000000001 [3EB4] to 000000000000011E --- Type 0001:0A (IM:TimedRequest) (B:39)[0m
+[0;32mI (50932) chip[EM]: <<< [E:63981r S:61756 M:259415247 (Ack:30687035)] (S) Msg TX from 000000000000011E to 1:0000000000000001 [3EB4] [UDP:192.168.1.47:53719] --- Type 0001:01 (IM:StatusResponse) (B:42)[0m
+[0;32mI (50942) chip[EM]: ??
